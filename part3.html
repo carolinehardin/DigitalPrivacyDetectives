@@ -14,12 +14,12 @@
 <tw-storydata name="Part 3: Study Hall" startnode="1" creator="Twine" creator-version="2.3.3" ifid="131D5779-F9B6-4186-9263-90A9908E4588" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 
 
-
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
 
 </script><tw-passagedata pid="1" name="WelcomeToStudyHall" tags="" position="484,243" size="100,100">
+    <img src="oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
     (set: $BranchA to false)
     (set: $BranchB to false)
     (set: $BranchSusanaNotDone to true)
@@ -34,6 +34,7 @@
 
     [[In Study Hall, supporting a friend. Digital Bullying is \\not\\ ok people! -&gt;StartStudyHall]]
 </tw-passagedata><tw-passagedata pid="2" name="StartStudyHall" tags="" position="484,393" size="100,100">
+    <img src="oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
     (if: $BranchA)[(if: $BranchB)[&#39;&#39;[[Incoming Message: Meet us at the Food Court!-&gt;GoToFoodCourt]]&#39;&#39;] ]
 
 
@@ -49,6 +50,7 @@
 
 
 </tw-passagedata><tw-passagedata pid="3" name=" AreYouOkSam" tags="" position="187,381" size="100,100">(set: $BranchA to true)
+    <img src="oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
 
     You: Sam! Are you ok? I&#39;m so sorry you&#39;re having to deal with this. *hugs* :&#39;(
 
@@ -63,7 +65,7 @@
     You: [[What do you need right now? -&gt;ThatsAlsoSmart]]
 
     You: [[I bet it was Akachi Cho! Revenge for the brutal way you shut down being asked out? -&gt;ThatsAlsoSmart]]</tw-passagedata><tw-passagedata pid="4" name=" WhoIsToBlame" tags="" position="871,705" size="100,100">(set: $BranchB to true)
-
+    <img src="oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
     Jordan: WHAT. Sam is back in school?
 
     You: Yeah.
@@ -89,7 +91,9 @@
     You: [[Why were you snooping on Yishai? That&#39;s a crappy thing to do, Becky -&gt;BlameYishai]]
 
     You: [[You didn&#39;t see him type his password did you? We could open up the program and look for evidence!-&gt;BlameYishai]]
-</tw-passagedata><tw-passagedata pid="5" name="ThatsAlsoSmart" tags="" position="189,545" size="100,100">Sam: I don&#39;t know. =( I&#39;m trying to do all this stuff now to prevent it from happening again. I put a sticker on my webcam and I reset all my passwords. I had like, a billion passwords. I finally got a password manager set up too.
+</tw-passagedata><tw-passagedata pid="5" name="ThatsAlsoSmart" tags="" position="189,545" size="100,100">
+    <img src="oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
+    Sam: I don&#39;t know. =( I&#39;m trying to do all this stuff now to prevent it from happening again. I put a sticker on my webcam and I reset all my passwords. I had like, a billion passwords. I finally got a password manager set up too.
 
     You: That&#39;s smart.
 
@@ -100,19 +104,25 @@
     [[I don&#39;t really want to get involved. She only listens to Susana Accursio or Kanya Okorie anyway. -&gt;StartStudyHall]]
 
     [[You&#39;re only hope is to skip school and then drop out. Move maybe?-&gt;StartStudyHall]]
-</tw-passagedata><tw-passagedata pid="6" name="BlameYishai" tags="" position="869,527" size="100,100">Jordan: Yishai is weird. Sending photos is weird. Coincidence?
+</tw-passagedata><tw-passagedata pid="6" name="BlameYishai" tags="" position="869,527" size="100,100">
+    <img src="oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
+    Jordan: Yishai is weird. Sending photos is weird. Coincidence?
 
     You: [[I don&#39;t believe in coincidences!-&gt;StartStudyHall]]
 
     You: [[That&#39;s kinda mean, Jordan. Just &#39;cause he&#39;s different doesn&#39;t mean you should pick on him.-&gt;StartStudyHall]]
 
-    You: [[Why would you blame Yishai? You trying to deflect blame? What are you trying to hide, huh? -&gt;StartStudyHall]]</tw-passagedata><tw-passagedata pid="7" name="GoToFoodCourt" tags="" position="854,361" size="100,100">Hooray! You are done with this set of digital clues!
+    You: [[Why would you blame Yishai? You trying to deflect blame? What are you trying to hide, huh? -&gt;StartStudyHall]]</tw-passagedata><tw-passagedata pid="7" name="GoToFoodCourt" tags="" position="854,361" size="100,100">
+    <img src="oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
+    Hooray! You are done with this set of digital clues!
 
     Don&#39;t forget to jot down what you learned about each person in the story.
 
     You can now explore the &#39;room&#39; until the time is up, or go back through the story again.
 
-    [[Start over -&gt;WelcomeToStudyHall]]</tw-passagedata><tw-passagedata pid="8" name=" MyParents " tags="" position="357,611" size="100,100">Susana: How embarassing to have your Mom get that photo! I&#39;d die.
+    [[Start over -&gt;WelcomeToStudyHall]]</tw-passagedata><tw-passagedata pid="8" name=" MyParents " tags="" position="357,611" size="100,100">
+    <img src="oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
+    Susana: How embarassing to have your Mom get that photo! I&#39;d die.
 
     You: I know.
 
@@ -128,8 +138,9 @@
 
     You: [[Do you remember that story about the teen who got blackmailed by someone threatening to send photos? -&gt;Exactly]]
 
-</tw-passagedata><tw-passagedata pid="9" name="Exactly" tags="" position="566,678" size="100,100">(set: $BranchSusanaNotDone to false)
-
+</tw-passagedata><tw-passagedata pid="9" name="Exactly" tags="" position="566,678" size="100,100">
+    <img src="oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
+    (set: $BranchSusanaNotDone to false)
     Susana: EXACTLY!
 
     You: No, //not// exactly. It was super sad how it ended. There were people who would have helped if they had had the chance. But nobody spoke up.
