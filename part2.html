@@ -145,7 +145,7 @@
 
     You can now explore the &#39;room&#39; until the time is up, or go back through the story again.
 
-    [[Go to start-&gt;School]] </tw-passagedata><tw-passagedata pid="13" name="Input" tags="margins" position="56,535" size="100,100">(set: $codeWord to (prompt: &quot;Enter your code word!&quot;, &quot;&quot;))
+    [[Go to start-&gt;School]] </tw-passagedata><tw-passagedata pid="13" name="Input" tags="margins" position="56,535" size="100,100">(set: $codeWord to (prompt: &quot;Enter your code word. (If you don't have one, enter 'none').&quot;, &quot;&quot;))
     <img src="oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
 
 (if: $codeWord is &#39;Bird&#39; or &#39;bird&#39;)
@@ -324,7 +324,7 @@
 (set:$JordanHisHerCaps to &#39;Their&#39;)
 [[Onward, detective!|School]]]
 
-(else-if: $codeWord is &#39;Fish&#39; or &#39;fish&#39;)
+(else-if: $codeWord is &#39;Fish&#39; or &#39;fish&#39; or &#39;None&#39; or &#39;none&#39; )
 [(set: $SamHeShe to &#39;they&#39;)
 (set: $SamHisHers to &#39;theirs&#39;)
 (set: $SamHimHer to &#39;them&#39;)
