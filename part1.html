@@ -9,6 +9,233 @@
 
 <body>
 
+<style>
+    .chat {
+    width: 300px ;
+    padding: 10px ;
+    font-family: helvetica; 
+    align-items: center;
+    font-size: 17px;
+    line-height: 20px;
+    }
+
+    .messages {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .message {
+    border-radius: 20px ;
+    padding: 8px 15px;
+    display: inline-block;
+    }
+
+    .hidden{
+    visibility: hidden;
+    }
+
+    .yours {
+    align-items: flex-start;
+    }
+
+    .yours .message {
+    margin-right: 25%;
+    background-color: #EEE;
+    position: relative;
+    color: black;
+    }
+
+    .yours .message.last:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: -7px;
+    height: 20px;
+    width: 20px;
+    background: #EEE;
+    border-bottom-right-radius: 15px;
+    }
+
+    .yours .message.last:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: -10px;
+    width: 10px;
+    height: 20px;
+    background: #000;
+    border-bottom-right-radius: 10px;
+    }
+
+    .mine {
+    align-items: flex-end;
+    }
+
+    .mine .message {
+    color: white;
+    margin-left: 25%;
+    background: rgb(0, 120, 254);
+    position: relative;
+    }
+
+    .mine .message.last:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    right: -8px;
+    height: 20px;
+    width: 20px;
+    background: rgb(0, 120, 254);
+    border-bottom-left-radius: 15px;
+    }
+
+    .mine .message.last:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: -10px;
+    width: 10px;
+    height: 20px;
+    background: #000;
+    border-bottom-left-radius: 10px;
+    }
+
+    .mainText {
+    opacity: 0;
+    -moz-animation: cssAnimation 9s;
+    /* Firefox */
+    -webkit-animation: cssAnimation 9s;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 9s;
+    /* Opera */
+    animation: cssAnimation 9s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    }
+
+    @keyframes cssAnimation {
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    }
+
+    @-webkit-keyframes cssAnimation {
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    }
+
+    /* keyframe for messages */
+    #msg1{
+    animation-name: msg1;
+    animation-iteration-count: 1;
+    animation-delay: .8s;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    }
+    #msg2{
+    animation-name: msg2;
+    animation-iteration-count: 1;
+    animation-delay: 2s;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    }
+    #msg3{
+    animation-name: msg3;
+    animation-iteration-count: 1;
+    animation-delay: 4s;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    }
+    #msg4{
+    animation-name: msg4;
+    animation-iteration-count: 1;
+    animation-delay: 6s;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    }
+    #msg5{
+    animation-name: msg4;
+    animation-iteration-count: 1;
+    animation-delay: 8s;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    }
+    #msg6{
+    animation-name: msg4;
+    animation-iteration-count: 1;
+    animation-delay: 10s;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    }
+
+    @keyframes msg1{
+    0% {
+        transform: scale(0);
+        visibility: visible;
+    }
+    5% {
+        transform: scale(1);
+    }
+    }
+    @keyframes msg2{
+    0% {
+        transform: scale(0);
+        visibility: visible;
+    }
+    5% {
+        transform: scale(1);
+    }
+    }
+    @keyframes msg3{
+    0% {
+        transform: scale(0);
+        visibility: visible;
+    }
+    5% {
+        transform: scale(1);
+    }
+    }
+    @keyframes msg4{
+    0% {
+        transform: scale(0);
+        visibility: visible;
+    }
+    5% {
+        transform: scale(1);
+    }
+    }
+    @keyframes msg5{
+    0% {
+        transform: scale(0);
+        visibility: visible;
+    }
+    5% {
+        transform: scale(1);
+    }
+    }
+    @keyframes msg6{
+    0% {
+        transform: scale(0);
+        visibility: visible;
+    }
+    5% {
+        transform: scale(1);
+    }
+    }
+</style>
+    
+
 <tw-story></tw-story>
 
 <tw-storydata name="Part 1: The Sleepover" startnode="1" creator="Twine" creator-version="2.3.3" ifid="331887BE-0C0D-42E7-B986-CC1D59B9FF95" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
@@ -18,7 +245,7 @@
 
 
 </script><tw-passagedata pid="1" name="Log into Secretz" tags="" position="577,409" size="100,100">
-    <img style="padding: 50 40px; float: right;" src="pt1.jpg" width ="300" height="215" alt="The Sleepover">
+    <img style="padding: 50 40px; float: right;" src="images/pt1.jpg" width ="300" height="215" alt="The Sleepover">
 
 
     Welcome back to ChatApp!
@@ -37,7 +264,7 @@
     (set: $SamHisHersCaps to &#39;His&#39;)
     (set: $SamHimHerCaps to &#39;Him&#39;)
     (set: $SamHisHerCaps to &#39;His&#39;)
-    <img src="oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
+    <img src="images/oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
     Yesterday **Sam** changed $SamHisHer relationship status with **Jordan** to ** we broke up**!
 
     Please complete: Jordan identifies as a:
@@ -52,9 +279,20 @@
     (set:$JordanHimHerCaps to &#39;Him&#39;)
     (set:$JordanHisHerCaps to &#39;His&#39;)
     (set:$JordanHisHers to &#39;His&#39;)
-    <img src="oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
+    <img src="images/oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
 
-    You have an incoming chat request from Becky!<img src="pt1Becky1.jpg" alt="    Becky: OMG. Did Jordan and Sam break up yesterday?! "   >  [[accept chat]]</tw-passagedata><tw-passagedata pid="4" name=" JordanGirl" tags="" position="561,803" size="100,100">
+    You have an incoming chat request from Becky!<div class="chat" alt=" Becky: OMG. Did Jordan and Sam break up yesterday?! ">
+    <div class="yours messages"><div id="msg1" class="message last hidden">OMG. Did Jordan and Sam break up yesterday?!</div></div></div> 
+    <script>
+        $(document).ready(function () {
+          $("div").addClass("hidden");
+      
+          setTimeout(function() {
+            $("div").removeClass("hidden");
+          }, 2000);
+        });
+    </script>
+    [[accept chat]]</tw-passagedata><tw-passagedata pid="4" name=" JordanGirl" tags="" position="561,803" size="100,100">
 
     (set: $JordanHeShe to &#39;she&#39;)
     (set:$JordanHisHers to &#39;hers&#39;)
@@ -65,8 +303,19 @@
     (set:$JordanHisHersCaps to &#39;Hers&#39;)
     (set:$JordanHimHerCaps to &#39;Her&#39;)
     (set:$JordanHisHerCaps to &#39;Her&#39;)
-    <img src="oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
-    You have an incoming chat request from Becky! [[accept chat]]</tw-passagedata><tw-passagedata pid="5" name=" JordanNeutral" tags="" position="711,803" size="100,100">(set: $JordanHeShe to &#39;they&#39;)
+    <img src="images/oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
+    You have an incoming chat request from Becky!<div class="chat" alt=" Becky: OMG. Did Jordan and Sam break up yesterday?! ">
+    <div class="yours messages"><div id="msg1" class="message last hidden">OMG. Did Jordan and Sam break up yesterday?!</div></div></div> 
+    <script>
+        $(document).ready(function () {
+          $("div").addClass("hidden");
+      
+          setTimeout(function() {
+            $("div").removeClass("hidden");
+          }, 2000);
+        });
+    </script> 
+    [[accept chat]]</tw-passagedata><tw-passagedata pid="5" name=" JordanNeutral" tags="" position="711,803" size="100,100">(set: $JordanHeShe to &#39;they&#39;)
     (set:$JordanHimHer to &#39;them&#39;)
     (set:$JordanHisHers to &#39;theirs&#39;)
     (set:$JordanHisHer to &#39;their&#39;)
@@ -75,8 +324,19 @@
     (set:$JordanHimHerCaps to &#39;Them&#39;)
     (set:$JordanHisHersCaps to &#39;Theirs&#39;)
     (set:$JordanHisHerCaps to &#39;Their&#39;)
-    <img src="oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
-    You have an incoming chat request from Becky! [[accept chat]]</tw-passagedata><tw-passagedata pid="6" name="SamGirl" tags="" position="415,620" size="100,100">(set: $SamHeShe to &#39;she&#39;)
+    <img src="images/oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
+    You have an incoming chat request from Becky!<div class="chat" alt=" Becky: OMG. Did Jordan and Sam break up yesterday?! ">
+    <div class="yours messages"><div id="msg1" class="message last hidden">OMG. Did Jordan and Sam break up yesterday?!</div></div></div> 
+    <script>
+        $(document).ready(function () {
+          $("div").addClass("hidden");
+      
+          setTimeout(function() {
+            $("div").removeClass("hidden");
+          }, 2000);
+        });
+    </script>
+    [[accept chat]]</tw-passagedata><tw-passagedata pid="6" name="SamGirl" tags="" position="415,620" size="100,100">(set: $SamHeShe to &#39;she&#39;)
     (set: $SamHisHer to &#39;her&#39;)
     (set: $SamHisHers to &#39;hers&#39;)
     (set: $SamHimHer to &#39;her&#39;)
@@ -85,7 +345,7 @@
     (set: $SamHisHerCaps to &#39;Her&#39;)
     (set: $SamHisHersCaps to &#39;Hers&#39;)
     (set: $SamHimHerCaps to &#39;Her&#39;)
-    <img src="oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
+    <img src="images/oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
     Yesterday **Sam** changed $SamHisHer relationship status with **Jordan** to ** we broke up**!
 
     Please complete: Jordan is a:
@@ -93,8 +353,8 @@
     [[girl -&gt; JordanGirl]]
     [[gender neutral -&gt; JordanNeutral]]</tw-passagedata><tw-passagedata pid="7" name="accept chat" tags="" position="711,953" size="100,100">
 
-    <img src="pt1Becky2.PNG" alt="
-    You: Hi Becky.
+    <div class="chat" alt="
+    You: Uhhh yeah?
 
     Becky: How is Jordan? What about Sam? I want ALL the details, plz. =D
 
@@ -104,6 +364,20 @@
 
     ............
     " >
+    <div class="mine messages">
+    <div id="msg1" class="message last hidden">Uhhh yeah?</div></div>
+    <div class="yours messages"><div id="msg2" class="message last hidden">How is Jordan? What about Sam? I want ALL the details, plz. =D</div></div>
+    <div class="mine messages"><div id="msg3" class="message last hidden">I really dunno much.</div></div>
+    <div class="yours messages"><div id="msg4" class="message last hidden">Come on, you've got a FRONT ROW seat to the biggest breakup in school. It's not like you're telling a stranger. I'm your best friend.</div></div></div>
+    <script>
+        $(document).ready(function () {
+          $("div").addClass("hidden");
+      
+          setTimeout(function() {
+            $("div").removeClass("hidden");
+          }, 9000);
+        });
+    </script>
     ...........
 
     What are you going to tell Becky? (Click on a response below)
@@ -125,9 +399,19 @@
     Please complete: Jordan is a
     [[boy -&gt; JordanBoy]]
     [[girl -&gt; JordanGirl]]
-    [[gender neutral -&gt; JordanNeutral]]</tw-passagedata><tw-passagedata pid="9" name="But I can&#39;t say anything more" tags="" position="939,1220" size="100,100"> <img alt ="Becky: But everyone is talking bout it. How is Sam, anyway?" src="iphone-pOww.jpg">
-    \
-
+    [[gender neutral -&gt; JordanNeutral]]</tw-passagedata><tw-passagedata pid="9" name="But I can&#39;t say anything more" tags="" position="939,1220" size="100,100"> 
+    <div class="chat" alt ="Becky: But everyone is talking bout it. How is Sam, anyway?"><div class="mine messages"><div id="msg1" class="message last hidden">But I can't say anything else</div></div>
+    <div class="yours messages"><div id="msg2" class="message last hidden">But everyone is talking about it. How is Sam anyway?</div></div>
+    </div>
+    <script>
+        $(document).ready(function () {
+          $("div").addClass("hidden");
+      
+          setTimeout(function() {
+            $("div").removeClass("hidden");
+          }, 5000);
+        });
+    </script>
     (link: &quot;Sam is pretty broken up about it.&quot;)[(set: $privacyScore to it +1)(goto: &quot;Sleepover status&quot;)]
 
     (link: &quot;You&#39;d have to ask Sam.&quot;)[(set: $privacyScore to it +5)(goto: &quot;Sleepover status&quot;)]
@@ -136,26 +420,52 @@
 
 
 </tw-passagedata><tw-passagedata pid="10" name="Sleepover status" tags="" position="707,1286" size="100,100">//Just then, you hear voices YELLING at each other from the other room.//
-    <img alt="
-    You: Uh oh, I hear Sam&#39;s mother yelling... :o
+    <div class="chat" alt="
+    You: Uh oh, I hear Sam&#39;s mother yelling...
 
-    Becky: About what?!" src= "iphone-xOww.jpg">
-
+    Becky: About what?!">
+    <div class="mine messages"><div id="msg1" class="message last hidden">Uh oh, I think I hear Sam's mother yelling</div></div>
+    <div class="yours messages"><div id="msg2" class="message last hidden">Omg about what?</div></div></div>
+    <script>
+        $(document).ready(function () {
+          $("div").addClass("hidden");
+      
+          setTimeout(function() {
+            $("div").removeClass("hidden");
+          }, 5000);
+        });
+    </script>
     You: (link: &quot;Uh, she&#39;s yelling about a photo... OMG somebody sent around a photo of Sam! Oh wow, this is getting serious. They are both yelling. I can&#39;t believe this is happening. So awkward.&quot;)[(set: $privacyScore to it +0)(goto: &quot;photoWasSent&quot;)]
 
     You: (link: &quot;Something about a photo?&quot;)[(set: $privacyScore to it +1)(goto: &quot;photoWasSent&quot;)]
 
     You: (link: &quot;You know, just parents flipping out about stuff.&quot;)[(set: $privacyScore to it +5)(goto: &quot;photoWasSent&quot;)]
 
-</tw-passagedata><tw-passagedata pid="11" name="photoWasSent" tags="" position="711,1396" size="100,100"> <img alt="Becky: OMG Did you get the email with the photo?! It just came in! Sam must be humiliated. There&#39;s no way I can unsee this.. LOL." src="iphone-SOww.jpg">
-
+</tw-passagedata><tw-passagedata pid="11" name="photoWasSent" tags="" position="711,1396" size="100,100"> <div class="chat" alt="Becky: OMG Did you get the email with the photo?! It just came in! Sam must be humiliated. There&#39;s no way I can unsee this.. LOL."><div class="yours messages"><div id="msg1" class="message last hidden">OMG Did you get the email with the photo?! It just came in! Sam must be humiliated. There's no way I can unsee this...LOL</div></div></div>
+    <script>
+      $(document).ready(function () {
+        $("div").addClass("hidden");
+    
+        setTimeout(function() {
+            $("div").removeClass("hidden");
+        }, 3000);
+      });
+    </script>
 
     You: (link: &quot;Wait, I&#39;m opening my email now to look&quot;)[(set: $privacyScore to it +0)(goto: &quot;respondToPhotoEmail&quot;)]
 
     You: (link: &quot;Uh oh. Should I just delete it without looking? I want to respect Sam&#39;s privacy&quot;)[(set: $privacyScore to it +5)(goto: &quot;respondToPhotoEmail&quot;)]
 
-    You: (link: &quot;LOL I so don&#39;t need to see photos of Sam...but tell me what the picture is!!&quot;)[(set: $privacyScore to it +1)(goto: &quot;respondToPhotoEmail&quot;)]</tw-passagedata><tw-passagedata pid="12" name="respondToPhotoEmail" tags="" position="711,1506" size="100,100"> <img alt ="Becky: OMG the photo went out to ::everybody::" src="iphone=WOww.jpg">
-
+    You: (link: &quot;LOL I so don&#39;t need to see photos of Sam...but tell me what the picture is!!&quot;)[(set: $privacyScore to it +1)(goto: &quot;respondToPhotoEmail&quot;)]</tw-passagedata><tw-passagedata pid="12" name="respondToPhotoEmail" tags="" position="711,1506" size="100,100"> <div class="chat" alt ="Becky: OMG the photo went out to ::everybody:: thru the school email"><div class="yours messages"><div id="msg1" class="message last hidden">OMG the photo went out to everybody thru the school email</div></div></div>
+    <script>
+        $(document).ready(function () {
+          $("div").addClass("hidden");
+      
+          setTimeout(function() {
+               $("div").removeClass("hidden");
+          }, 3000);
+        });
+    </script>
     (link: &quot;I dunno, we should really not talk about the photo. Maybe we should send a message to everybody and ask them not to open the email.&quot;)[(set: $privacyScore to it +5)(goto: &quot;GoToSchool&quot;)]
 
     (link: &quot;LOL Let&#39;s forward it to more people, everyone needs to see this. This is BRUTAL! I&#39;m going to post this to FaceBook too....&quot;)[(set: $privacyScore to it +0)(goto: &quot;GoToSchool&quot;)]
@@ -169,30 +479,61 @@
 
     (link: &quot;SLightly ok choice&quot;)[(set: $privacyScore to it +1)(goto: &quot;GoToSchool&quot;)]
 
-    (link: &quot;Good Choice&quot;)[(set: $privacyScore to it +1)(goto: &quot;GoToSchool&quot;)]</tw-passagedata><tw-passagedata pid="14" name="I should probably not say anything else." tags="" position="372,1176" size="100,100">You: I g2g soon anyway, Sam&#39;s mom is driving us to school.
+    (link: &quot;Good Choice&quot;)[(set: $privacyScore to it +1)(goto: &quot;GoToSchool&quot;)]</tw-passagedata><tw-passagedata pid="14" name="I should probably not say anything else." tags="" position="372,1176" size="100,100">
+    <div class="chat" alt="
+    You: I probably should'nt say anything else, Sam&#39;s mom is driving us to school.
 
-    <img alt="
     Becky: That&#39;s right, you had a sleepover last night. That means you probably heard the ENTIRE breakup! I. am. so. jealous.
 
     You: I didn&#39;t really hear anything.
 
-    Becky: I still can&#39;t believe they broke up... you just know someone is going to have their eye on Jordon. It&#39;s only a matter of time.
+    Becky: I still can&#39;t believe they broke up... you just know someone is going to have their eye on Jordan. It&#39;s only a matter of time.
 
-    You: I guess. " src= "iphone-7Nww.jpg">
-
+    You: I guess. ">
+    <div class="mine messages"><div id="msg1" class="message last hidden">I probably shouldn't say anything else</div>
+    <div id="msg2" class="message last hidden">Sam's mom is driving us to school</div></div>
+    <div class="yours messages"><div id="msg3" class="message last hidden">That's right, you had a sleepover last night. That means you probably heard the ENTIRE breakup! I. am. so. jealous.</div></div>
+    <div class="mine messages"><div id="msg4" class="message last hidden">I really didn't hear anything</div></div>
+    <div class="yours messages"><div id="msg5" class="message last hidden">I still can't believe they broke up...you just know someone is going to have their eye on Jordan. It's only a matter of time.</div></div>
+    <div class="mine messages"><div id="msg6" class="message last hidden">I guess.</div></div>
+    </div>
+    <script>
+        $(document).ready(function () {
+          $("div").addClass("hidden");
+      
+          setTimeout(function() {
+            $("div").removeClass("hidden");
+          }, 11500);
+        });
+    </script>
     You: [[But I can&#39;t say anything more]]
     You: [[Yeah, do you know if jordan is already talking to someone?]]</tw-passagedata><tw-passagedata pid="15" name="I do know this one thing..." tags="" position="668,1079" size="100,100">
-    <img alt="
+    <div class="chat" alt="
     Becky: You&#39;re the best! I&#39;m not surprised Jordan broke up with Sam. I mean, Sam is sort of... well... //awkward//.
 
-    You: No that&#39;s the thing! Sam was the one who dumped Jordon!
+    You: No that&#39;s the thing! Sam was the one who dumped Jordan!
 
     Becky: WHAT?!
 
     You: IKR? Jordan is crushed. Just completely destroyed. It sounds like dating is off the table for at LEAST a year.
 
-    Becky: Why tho? Jordon could totally get another date in time for the dance. D= " src= "iphone-NNww.jpg">
-
+    Becky: Why tho? Jordon could totally get another date in time for the dance." src= "images/iphone-NNww.png">
+    <div class="mine messages"><div id="msg1" class="message last hidden">I do know this one thing</div></div>
+    <div class="yours messages"><div id="msg2" class="message last hidden">omg you're the best! I'm not surprised Jordan broke up with Sam. I mean, Sam is sort of...well...awkward</div></div>
+    <div class="mine messages"><div id="msg3" class="message last hidden">No that's the thing! Sam was the one who dumped Jordan!</div></div>
+    <div class="yours messages"><div id="msg4" class="message last hidden">WHAT?!</div></div>
+    <div class="mine messages"><div id="msg5" class="message last hidden">IKR? Jordan is crushed. Just completely destroyed. It sounds like dating is off the table for at LEAST a year.</div></div>
+    <div class="yours messages"><div id="msg6" class="message last hidden">Why tho? Jordan could totally get another date in time for the dance.</div></div>
+    </div>
+    <script>
+        $(document).ready(function () {
+          $("div").addClass("hidden");
+      
+          setTimeout(function() {
+            $("div").removeClass("hidden");
+          }, 11500);
+        });
+    </script>
     You: [[I should probably not say anything else.]] </tw-passagedata><tw-passagedata pid="16" name="GoToSchool" tags="" position="1097,1386" size="100,100">Great work detective! You are done with this set of digital clues.
 
     Take a moment to jot down what you know about the characters so you can discover who sent the photo. Who said things that respected privacy? (and who didn&#39;t?)
@@ -200,9 +541,19 @@
     You can now explore the &#39;room&#39; until the time is up, or go back through the story again.
 
     [[Go to start-&gt;Log into Secretz]]</tw-passagedata><tw-passagedata pid="17" name="Yeah, do you know if jordan is already talking to someone?" tags="" position="372,1326" size="100,100">
-    <img alt="Yeah, do you know if jordan is already talking to someone?
-    Becky: I can try to figure that out if you tell me about Sam   You:" src = "iphone-fOww.jpg">
-
+    <div class="chat" alt="Yeah, do you know if jordan is already talking to someone?
+    Becky: I can try to figure that out if you tell me about Sam   You:">
+    <div class="mine messages"><div id="msg1" class="message last hidden">Yeah, do you know if Jordan is already talking to someone?</div></div>
+    <div class="yours messages"><div id="msg2" class="message last hidden">I can try to figure that out if you tell me about Sam</div></div></div>
+    <script>
+        $(document).ready(function () {
+          $("div").addClass("hidden");
+      
+          setTimeout(function() {
+            $("div").removeClass("hidden");
+          }, 5000);
+        });
+    </script>
     (link:  &quot;Oh no I&#39;m okay I was just curious if you happened to know&quot; )[(set: $privacyScore to it +1)(goto: &quot;Sleepover status&quot;)]
 
     (link: &quot;Nevermind I shouldn&#39;t have asked that&quot;)[(set: $privacyScore to it +2)(goto: &quot;Sleepover status&quot;)]
