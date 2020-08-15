@@ -30,10 +30,6 @@
     display: inline-block;
     }
 
-    .hidden{
-    visibility: hidden;
-    }
-
     .yours {
     align-items: flex-start;
     }
@@ -104,133 +100,223 @@
     border-bottom-left-radius: 10px;
     }
 
-    .mainText {
-    opacity: 0;
-    -moz-animation: cssAnimation 9s;
-    /* Firefox */
-    -webkit-animation: cssAnimation 9s;
-    /* Safari and Chrome */
-    -o-animation: cssAnimation 9s;
-    /* Opera */
-    animation: cssAnimation 9s;
+    /* keyframe for messages */
+    #msg1{
+    -webkit-animation: msg1 10s;
+    animation: msg1 10s;
+    animation-iteration-count: 1;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     }
-
-    @keyframes cssAnimation {
-    90% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-    }
-
-    @-webkit-keyframes cssAnimation {
-    90% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-    }
-
-    /* keyframe for messages */
-    #msg1{
-    animation-name: msg1;
-    animation-iteration-count: 1;
-    animation-delay: .8s;
-    animation-duration: 10s;
-    animation-fill-mode: forwards;
-    }
     #msg2{
-    animation-name: msg2;
+    -webkit-animation: msg2 10s;
+    animation: msg2 10s;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
-    animation-delay: 2s;
-    animation-duration: 10s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     }
     #msg3{
-    animation-name: msg3;
+    -webkit-animation: msg3 10s;
+    animation: msg3 10s;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
-    animation-delay: 4s;
-    animation-duration: 10s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     }
     #msg4{
-    animation-name: msg4;
+    -webkit-animation: msg4 10s;
+    animation: msg4 10s;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
-    animation-delay: 6s;
-    animation-duration: 10s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     }
     #msg5{
-    animation-name: msg4;
+    -webkit-animation: msg5 10s;
+    animation: msg5 10s;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
-    animation-delay: 8s;
-    animation-duration: 10s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     }
     #msg6{
-    animation-name: msg4;
+    -webkit-animation: msg6 10s;
+    animation: msg6 10s;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
-    animation-delay: 10s;
-    animation-duration: 10s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     }
 
     @keyframes msg1{
     0% {
         transform: scale(0);
-        visibility: visible;
+        opacity: 0;
     }
-    5% {
+    8% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    13% {
         transform: scale(1);
+        opacity: 1;
     }
     }
     @keyframes msg2{
     0% {
         transform: scale(0);
-        visibility: visible;
+        opacity: 0;
     }
-    5% {
+    20% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    25% {
         transform: scale(1);
+        opacity: 1;
     }
     }
     @keyframes msg3{
     0% {
         transform: scale(0);
-        visibility: visible;
+        opacity: 0;
     }
-    5% {
+    32% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    37% {
         transform: scale(1);
+        opacity: 1;
     }
     }
     @keyframes msg4{
     0% {
         transform: scale(0);
-        visibility: visible;
+        opacity: 0;
     }
-    5% {
+    44% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    49% {
         transform: scale(1);
+        opacity: 1;
     }
     }
     @keyframes msg5{
     0% {
         transform: scale(0);
-        visibility: visible;
+        opacity: 0;
     }
-    5% {
+    56% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    61% {
         transform: scale(1);
+        opacity: 1;
     }
     }
     @keyframes msg6{
     0% {
         transform: scale(0);
-        visibility: visible;
+        opacity: 0;
     }
-    5% {
+    68% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    73% {
         transform: scale(1);
+        opacity: 1;
+    }
+    }
+
+    /* Safari and Chrome */
+    @-webkit-keyframes msg1{
+    0% {
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+    8% {
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+    13% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+    }
+    @-webkit-keyframes msg2{
+    0% {
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+    16% {
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+    21% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+    }
+    @-webkit-keyframes msg3{
+    0% {
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+    24% {
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+    29% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+    }
+    @-webkit-keyframes msg4{
+    0% {
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+    32% {
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+    37% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+    }
+    @-webkit-keyframes msg5{
+    0% {
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+    40% {
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+    45% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+    }
+    @-webkit-keyframes msg6{
+    0% {
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+    48% {
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+    53% {
+        -webkit-transform: scale(1);
+        opacity: 1;
     }
     }
 </style>
@@ -241,10 +327,9 @@
 <tw-storydata name="Part 1: The Sleepover" startnode="1" creator="Twine" creator-version="2.3.3" ifid="331887BE-0C0D-42E7-B986-CC1D59B9FF95" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">
-
-
-</script><tw-passagedata pid="1" name="Log into Secretz" tags="" position="577,409" size="100,100">
+</style>
+<script role="script" id="twine-user-script" type="text/twine-javascript"></script>
+<tw-passagedata pid="1" name="Log into Secretz" tags="" position="577,409" size="100,100">
     <img style="padding: 50 40px; float: right;" src="images/pt1.jpg" width ="300" height="215" alt="The Sleepover">
 
 
@@ -282,16 +367,8 @@
     <img src="images/oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
 
     You have an incoming chat request from Becky!<div class="chat" alt=" Becky: OMG. Did Jordan and Sam break up yesterday?! ">
-    <div class="yours messages"><div id="msg1" class="message last hidden">OMG. Did Jordan and Sam break up yesterday?!</div></div></div> 
-    <script>
-        $(document).ready(function () {
-          $("div").addClass("hidden");
-      
-          setTimeout(function() {
-            $("div").removeClass("hidden");
-          }, 2000);
-        });
-    </script>
+    <div class="yours messages"><div id="msg1" class="message last">OMG. Did Jordan and Sam break up yesterday?!</div></div></div> 
+
     [[accept chat]]</tw-passagedata><tw-passagedata pid="4" name=" JordanGirl" tags="" position="561,803" size="100,100">
 
     (set: $JordanHeShe to &#39;she&#39;)
@@ -305,16 +382,8 @@
     (set:$JordanHisHerCaps to &#39;Her&#39;)
     <img src="images/oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
     You have an incoming chat request from Becky!<div class="chat" alt=" Becky: OMG. Did Jordan and Sam break up yesterday?! ">
-    <div class="yours messages"><div id="msg1" class="message last hidden">OMG. Did Jordan and Sam break up yesterday?!</div></div></div> 
-    <script>
-        $(document).ready(function () {
-          $("div").addClass("hidden");
-      
-          setTimeout(function() {
-            $("div").removeClass("hidden");
-          }, 2000);
-        });
-    </script> 
+    <div class="yours messages"><div id="msg1" class="message last">OMG. Did Jordan and Sam break up yesterday?!</div></div></div> 
+    
     [[accept chat]]</tw-passagedata><tw-passagedata pid="5" name=" JordanNeutral" tags="" position="711,803" size="100,100">(set: $JordanHeShe to &#39;they&#39;)
     (set:$JordanHimHer to &#39;them&#39;)
     (set:$JordanHisHers to &#39;theirs&#39;)
@@ -326,16 +395,7 @@
     (set:$JordanHisHerCaps to &#39;Their&#39;)
     <img src="images/oneglass.jpg" width ="300" height="80" alt="Magnifying Glass">
     You have an incoming chat request from Becky!<div class="chat" alt=" Becky: OMG. Did Jordan and Sam break up yesterday?! ">
-    <div class="yours messages"><div id="msg1" class="message last hidden">OMG. Did Jordan and Sam break up yesterday?!</div></div></div> 
-    <script>
-        $(document).ready(function () {
-          $("div").addClass("hidden");
-      
-          setTimeout(function() {
-            $("div").removeClass("hidden");
-          }, 2000);
-        });
-    </script>
+    <div class="yours messages"><div id="msg1" class="message last">OMG. Did Jordan and Sam break up yesterday?!</div></div></div> 
     [[accept chat]]</tw-passagedata><tw-passagedata pid="6" name="SamGirl" tags="" position="415,620" size="100,100">(set: $SamHeShe to &#39;she&#39;)
     (set: $SamHisHer to &#39;her&#39;)
     (set: $SamHisHers to &#39;hers&#39;)
@@ -365,19 +425,10 @@
     ............
     " >
     <div class="mine messages">
-    <div id="msg1" class="message last hidden">Uhhh yeah?</div></div>
-    <div class="yours messages"><div id="msg2" class="message last hidden">How is Jordan? What about Sam? I want ALL the details, plz. =D</div></div>
-    <div class="mine messages"><div id="msg3" class="message last hidden">I really dunno much.</div></div>
-    <div class="yours messages"><div id="msg4" class="message last hidden">Come on, you've got a FRONT ROW seat to the biggest breakup in school. It's not like you're telling a stranger. I'm your best friend.</div></div></div>
-    <script>
-        $(document).ready(function () {
-          $("div").addClass("hidden");
-      
-          setTimeout(function() {
-            $("div").removeClass("hidden");
-          }, 9000);
-        });
-    </script>
+    <div id="msg1" class="message last">Uhhh yeah?</div></div>
+    <div class="yours messages"><div id="msg2" class="message last">How is Jordan? What about Sam? I want ALL the details, plz. =D</div></div>
+    <div class="mine messages"><div id="msg3" class="message last">I really dunno much.</div></div>
+    <div class="yours messages"><div id="msg4" class="message last">Come on, you've got a FRONT ROW seat to the biggest breakup in school. It's not like you're telling a stranger. I'm your best friend.</div></div></div>
     ...........
 
     What are you going to tell Becky? (Click on a response below)
@@ -400,18 +451,10 @@
     [[boy -&gt; JordanBoy]]
     [[girl -&gt; JordanGirl]]
     [[gender neutral -&gt; JordanNeutral]]</tw-passagedata><tw-passagedata pid="9" name="But I can&#39;t say anything more" tags="" position="939,1220" size="100,100"> 
-    <div class="chat" alt ="Becky: But everyone is talking bout it. How is Sam, anyway?"><div class="mine messages"><div id="msg1" class="message last hidden">But I can't say anything else</div></div>
-    <div class="yours messages"><div id="msg2" class="message last hidden">But everyone is talking about it. How is Sam anyway?</div></div>
+    <div class="chat" alt ="Becky: But everyone is talking bout it. How is Sam, anyway?"><div class="mine messages"><div id="msg1" class="message last">But I can't say anything else</div></div>
+    <div class="yours messages"><div id="msg2" class="message last">But everyone is talking about it. How is Sam anyway?</div></div>
     </div>
-    <script>
-        $(document).ready(function () {
-          $("div").addClass("hidden");
-      
-          setTimeout(function() {
-            $("div").removeClass("hidden");
-          }, 5000);
-        });
-    </script>
+    
     (link: &quot;Sam is pretty broken up about it.&quot;)[(set: $privacyScore to it +1)(goto: &quot;Sleepover status&quot;)]
 
     (link: &quot;You&#39;d have to ask Sam.&quot;)[(set: $privacyScore to it +5)(goto: &quot;Sleepover status&quot;)]
@@ -424,48 +467,23 @@
     You: Uh oh, I hear Sam&#39;s mother yelling...
 
     Becky: About what?!">
-    <div class="mine messages"><div id="msg1" class="message last hidden">Uh oh, I think I hear Sam's mother yelling</div></div>
-    <div class="yours messages"><div id="msg2" class="message last hidden">Omg about what?</div></div></div>
-    <script>
-        $(document).ready(function () {
-          $("div").addClass("hidden");
-      
-          setTimeout(function() {
-            $("div").removeClass("hidden");
-          }, 5000);
-        });
-    </script>
+    <div class="mine messages"><div id="msg1" class="message last">Uh oh, I think I hear Sam's mother yelling</div></div>
+    <div class="yours messages"><div id="msg2" class="message last">Omg about what?</div></div></div>
+    
     You: (link: &quot;Uh, she&#39;s yelling about a photo... OMG somebody sent around a photo of Sam! Oh wow, this is getting serious. They are both yelling. I can&#39;t believe this is happening. So awkward.&quot;)[(set: $privacyScore to it +0)(goto: &quot;photoWasSent&quot;)]
 
     You: (link: &quot;Something about a photo?&quot;)[(set: $privacyScore to it +1)(goto: &quot;photoWasSent&quot;)]
 
     You: (link: &quot;You know, just parents flipping out about stuff.&quot;)[(set: $privacyScore to it +5)(goto: &quot;photoWasSent&quot;)]
 
-</tw-passagedata><tw-passagedata pid="11" name="photoWasSent" tags="" position="711,1396" size="100,100"> <div class="chat" alt="Becky: OMG Did you get the email with the photo?! It just came in! Sam must be humiliated. There&#39;s no way I can unsee this.. LOL."><div class="yours messages"><div id="msg1" class="message last hidden">OMG Did you get the email with the photo?! It just came in! Sam must be humiliated. There's no way I can unsee this...LOL</div></div></div>
-    <script>
-      $(document).ready(function () {
-        $("div").addClass("hidden");
-    
-        setTimeout(function() {
-            $("div").removeClass("hidden");
-        }, 3000);
-      });
-    </script>
+</tw-passagedata><tw-passagedata pid="11" name="photoWasSent" tags="" position="711,1396" size="100,100"> <div class="chat" alt="Becky: OMG Did you get the email with the photo?! It just came in! Sam must be humiliated. There&#39;s no way I can unsee this.. LOL."><div class="yours messages"><div id="msg1" class="message last">OMG Did you get the email with the photo?! It just came in! Sam must be humiliated. There's no way I can unsee this...LOL</div></div></div>
 
     You: (link: &quot;Wait, I&#39;m opening my email now to look&quot;)[(set: $privacyScore to it +0)(goto: &quot;respondToPhotoEmail&quot;)]
 
     You: (link: &quot;Uh oh. Should I just delete it without looking? I want to respect Sam&#39;s privacy&quot;)[(set: $privacyScore to it +5)(goto: &quot;respondToPhotoEmail&quot;)]
 
-    You: (link: &quot;LOL I so don&#39;t need to see photos of Sam...but tell me what the picture is!!&quot;)[(set: $privacyScore to it +1)(goto: &quot;respondToPhotoEmail&quot;)]</tw-passagedata><tw-passagedata pid="12" name="respondToPhotoEmail" tags="" position="711,1506" size="100,100"> <div class="chat" alt ="Becky: OMG the photo went out to ::everybody:: thru the school email"><div class="yours messages"><div id="msg1" class="message last hidden">OMG the photo went out to everybody thru the school email</div></div></div>
-    <script>
-        $(document).ready(function () {
-          $("div").addClass("hidden");
-      
-          setTimeout(function() {
-               $("div").removeClass("hidden");
-          }, 3000);
-        });
-    </script>
+    You: (link: &quot;LOL I so don&#39;t need to see photos of Sam...but tell me what the picture is!!&quot;)[(set: $privacyScore to it +1)(goto: &quot;respondToPhotoEmail&quot;)]</tw-passagedata><tw-passagedata pid="12" name="respondToPhotoEmail" tags="" position="711,1506" size="100,100"> <div class="chat" alt ="Becky: OMG the photo went out to ::everybody:: thru the school email"><div class="yours messages"><div id="msg1" class="message last">OMG the photo went out to everybody thru the school email</div></div></div>
+    
     (link: &quot;I dunno, we should really not talk about the photo. Maybe we should send a message to everybody and ask them not to open the email.&quot;)[(set: $privacyScore to it +5)(goto: &quot;GoToSchool&quot;)]
 
     (link: &quot;LOL Let&#39;s forward it to more people, everyone needs to see this. This is BRUTAL! I&#39;m going to post this to FaceBook too....&quot;)[(set: $privacyScore to it +0)(goto: &quot;GoToSchool&quot;)]
@@ -490,22 +508,14 @@
     Becky: I still can&#39;t believe they broke up... you just know someone is going to have their eye on Jordan. It&#39;s only a matter of time.
 
     You: I guess. ">
-    <div class="mine messages"><div id="msg1" class="message last hidden">I probably shouldn't say anything else</div>
-    <div id="msg2" class="message last hidden">Sam's mom is driving us to school</div></div>
-    <div class="yours messages"><div id="msg3" class="message last hidden">That's right, you had a sleepover last night. That means you probably heard the ENTIRE breakup! I. am. so. jealous.</div></div>
-    <div class="mine messages"><div id="msg4" class="message last hidden">I really didn't hear anything</div></div>
-    <div class="yours messages"><div id="msg5" class="message last hidden">I still can't believe they broke up...you just know someone is going to have their eye on Jordan. It's only a matter of time.</div></div>
-    <div class="mine messages"><div id="msg6" class="message last hidden">I guess.</div></div>
+    <div class="mine messages"><div id="msg1" class="message last">I probably shouldn't say anything else</div>
+    <div id="msg2" class="message last">Sam's mom is driving us to school</div></div>
+    <div class="yours messages"><div id="msg3" class="message last">That's right, you had a sleepover last night. That means you probably heard the ENTIRE breakup! I. am. so. jealous.</div></div>
+    <div class="mine messages"><div id="msg4" class="message last">I really didn't hear anything</div></div>
+    <div class="yours messages"><div id="msg5" class="message last">I still can't believe they broke up...you just know someone is going to have their eye on Jordan. It's only a matter of time.</div></div>
+    <div class="mine messages"><div id="msg6" class="message last">I guess.</div></div>
     </div>
-    <script>
-        $(document).ready(function () {
-          $("div").addClass("hidden");
-      
-          setTimeout(function() {
-            $("div").removeClass("hidden");
-          }, 11500);
-        });
-    </script>
+    
     You: [[But I can&#39;t say anything more]]
     You: [[Yeah, do you know if jordan is already talking to someone?]]</tw-passagedata><tw-passagedata pid="15" name="I do know this one thing..." tags="" position="668,1079" size="100,100">
     <div class="chat" alt="
@@ -517,23 +527,15 @@
 
     You: IKR? Jordan is crushed. Just completely destroyed. It sounds like dating is off the table for at LEAST a year.
 
-    Becky: Why tho? Jordon could totally get another date in time for the dance." src= "images/iphone-NNww.png">
-    <div class="mine messages"><div id="msg1" class="message last hidden">I do know this one thing</div></div>
-    <div class="yours messages"><div id="msg2" class="message last hidden">omg you're the best! I'm not surprised Jordan broke up with Sam. I mean, Sam is sort of...well...awkward</div></div>
-    <div class="mine messages"><div id="msg3" class="message last hidden">No that's the thing! Sam was the one who dumped Jordan!</div></div>
-    <div class="yours messages"><div id="msg4" class="message last hidden">WHAT?!</div></div>
-    <div class="mine messages"><div id="msg5" class="message last hidden">IKR? Jordan is crushed. Just completely destroyed. It sounds like dating is off the table for at LEAST a year.</div></div>
-    <div class="yours messages"><div id="msg6" class="message last hidden">Why tho? Jordan could totally get another date in time for the dance.</div></div>
+    Becky: Why tho? Jordon could totally get another date in time for the dance.">
+    <div class="mine messages"><div id="msg1" class="message last">I do know this one thing</div></div>
+    <div class="yours messages"><div id="msg2" class="message last">omg you're the best! I'm not surprised Jordan broke up with Sam. I mean, Sam is sort of...well...awkward</div></div>
+    <div class="mine messages"><div id="msg3" class="message last">No that's the thing! Sam was the one who dumped Jordan!</div></div>
+    <div class="yours messages"><div id="msg4" class="message last">WHAT?!</div></div>
+    <div class="mine messages"><div id="msg5" class="message last">IKR? Jordan is crushed. Just completely destroyed. It sounds like dating is off the table for at LEAST a year.</div></div>
+    <div class="yours messages"><div id="msg6" class="message last">Why tho? Jordan could totally get another date in time for the dance.</div></div>
     </div>
-    <script>
-        $(document).ready(function () {
-          $("div").addClass("hidden");
-      
-          setTimeout(function() {
-            $("div").removeClass("hidden");
-          }, 11500);
-        });
-    </script>
+    
     You: [[I should probably not say anything else.]] </tw-passagedata><tw-passagedata pid="16" name="GoToSchool" tags="" position="1097,1386" size="100,100">Great work detective! You are done with this set of digital clues.
 
     Take a moment to jot down what you know about the characters so you can discover who sent the photo. Who said things that respected privacy? (and who didn&#39;t?)
@@ -543,17 +545,9 @@
     [[Go to start-&gt;Log into Secretz]]</tw-passagedata><tw-passagedata pid="17" name="Yeah, do you know if jordan is already talking to someone?" tags="" position="372,1326" size="100,100">
     <div class="chat" alt="Yeah, do you know if jordan is already talking to someone?
     Becky: I can try to figure that out if you tell me about Sam   You:">
-    <div class="mine messages"><div id="msg1" class="message last hidden">Yeah, do you know if Jordan is already talking to someone?</div></div>
-    <div class="yours messages"><div id="msg2" class="message last hidden">I can try to figure that out if you tell me about Sam</div></div></div>
-    <script>
-        $(document).ready(function () {
-          $("div").addClass("hidden");
-      
-          setTimeout(function() {
-            $("div").removeClass("hidden");
-          }, 5000);
-        });
-    </script>
+    <div class="mine messages"><div id="msg1" class="message last">Yeah, do you know if Jordan is already talking to someone?</div></div>
+    <div class="yours messages"><div id="msg2" class="message last">I can try to figure that out if you tell me about Sam</div></div></div>
+    
     (link:  &quot;Oh no I&#39;m okay I was just curious if you happened to know&quot; )[(set: $privacyScore to it +1)(goto: &quot;Sleepover status&quot;)]
 
     (link: &quot;Nevermind I shouldn&#39;t have asked that&quot;)[(set: $privacyScore to it +2)(goto: &quot;Sleepover status&quot;)]
@@ -585,7 +579,6 @@ var i=b(t);e(i).parents("tw-collapsed").length||(i=null),t.findAndFilter("br:not
 
 Passage(n,{transitionIn:r,transitionOut:r})}),{earlyExit:1}):a.create("macrocall","I can't (goto-transition:) the passage '"+r+"' because it doesn't exist.")}}},[String,String])("undo",function(){return{TwineScript_ObjectName:"a (undo:) command",TwineScript_TypeName:"a (undo:) command",TwineScript_Print:function(){return r.pastLength<1?a.create("macrocall","I can't (undo:) on the first turn."):(e(function(){return o.goBack()}),{earlyExit:1})}}},[])("live",function(e,t){return{TwineScript_ObjectName:"a (live: "+t+") command",TwineScript_TypeName:"a (live:) command",live:!0,delay:t}},[g(Number)])("stop",function(){return{TwineScript_ObjectName:"a (stop:) command",TwineScript_TypeName:"a (stop:) command",TwineScript_Print:function(){return""}}},[])("savegame",function(e,t,n){if(n=n||"",!y)return!1;var i=r.serialise();if(a.containsError(i))return i;try{return localStorage.setItem(c("Saved Game")+t,i),localStorage.setItem(c("Saved Game Filename")+t,n),!0}catch(e){return!1}},[String,g(String)])("loadgame",function(t,n){return{TwineScript_ObjectName:"a (load-game:) command",TwineScript_TypeName:"a (load-game:) command",TwineScript_Print:function(){var t=localStorage.getItem(c("Saved Game")+n);return t?(r.deserialise(t),e(o.showPassage.bind(o,r.passage,!1)),{earlyExit:1}):a.create("saving","I can't find a save slot named '"+n+"'!")}}},[String])("alert",function(e,t){return{TwineScript_ObjectName:"an (alert:) command",TwineScript_TypeName:"an (alert:) command",TwineScript_Print:function(){return window.alert(t),""}}},[String])("prompt",function(e,t,n){return window.prompt(t,n)||""},[String,String])("confirm",function(e,t){return window.confirm(t)},[String])("openURL",function(e,t){return{TwineScript_ObjectName:"an (open-url:) command",TwineScript_TypeName:"an (open-url:) command",TwineScript_Print:function(){return window.open(t,""),""}}},[String])("reload",function(){return{TwineScript_ObjectName:"a (reload:) command",TwineScript_TypeName:"a (reload:) command",TwineScript_Print:function(){return r.pastLength<1?a.create("infinite","I mustn't (reload:) the page in the starting passage."):(window.location.reload(),{earlyExit:1})}}},[])("gotoURL",function(e,t){return{TwineScript_ObjectName:"a (goto-url:) command",TwineScript_TypeName:"a (goto-url:) command",TwineScript_Print:function(){return window.location.assign(t),{earlyExit:1}}}},[String])("pageURL",function(){return window.location.href},[])}),define("macrolib/datastructures",["jquery","utils/naturalsort","macros","utils/operationutils","state","engine","passages","datatypes/lambda","datatypes/assignmentrequest","internaltypes/twineerror","internaltypes/twinenotifier"],function(e,t,n,r,i,o,a,s,u,c,l){var f=r.objectName,p=(r.typeName,r.subset),d=r.collectionType,h=r.isValidDatamapName,m=r.is,g=r.unique,y=r.clone,v=n.TypeSignature,b=v.optional,w=v.rest,x=v.either,T=v.zeroOrMore,S=v.Any;n.add("set",function(){for(var e="",t=0;t<(arguments.length<=1?0:arguments.length-1);t+=1){var n=arguments.length<=t+1?void 0:arguments[t+1];if("into"===n.operator)return c.create("macrocall","Please say 'to' when using the (set:) macro.");var r=void 0;if(n.src&&n.src.varref){var i=n.src.get(),a=void 0;if(a=c.containsError(i))return a;r=n.dest.set(i)}else r=n.dest.set(n.src);if(c.isPrototypeOf(r))return r;o.options.debug&&(e+=(e?"; ":"")+f(n.dest)+" is now "+f(n.src))}return{TwineScript_TypeName:"a (set:) operation",TwineScript_ObjectName:"a (set:) operation",TwineScript_Unstorable:!0,TwineScript_Print:function(){return e&&l.create(e).render()}}},[w(u)])("put",function(){for(var e="",t=0;t<(arguments.length<=1?0:arguments.length-1);t+=1){var n=arguments.length<=t+1?void 0:arguments[t+1];if("into"!==n.operator)return c.create("macrocall","Please say 'into' when using the (put:) macro.");var r=n.dest.set(n.src);if(c.isPrototypeOf(r))return r;o.options.debug&&(e+=(e?"; ":"")+f(n.dest)+" is now "+f(n.src))}return{TwineScript_TypeName:"a (put:) operation",TwineScript_ObjectName:"a (put:) operation",TwineScript_Unstorable:!0,TwineScript_Print:function(){return e&&l.create(e).render()}}},[w(u)])("move",function(){for(var e="",t=0;t<(arguments.length<=1?0:arguments.length-1);t+=1){var n=arguments.length<=t+1?void 0:arguments[t+1];if("into"!==n.operator)return c.create("macrocall","Please say 'into' when using the (move:) macro.");var r=void 0,i=void 0;if(n.src&&n.src.varref){var a=n.src.get();if(i=c.containsError(a))return i;if(r=n.dest.set(a),i=c.containsError(r))return i;n.src.delete()}else if(r=n.dest.set(n.src),i=c.containsError(r))return i;o.options.debug&&(e+=(e?"; ":"")+f(n.dest)+" is now "+f(n.src))}return{TwineScript_TypeName:"a (move:) operation",TwineScript_ObjectName:"a (move:) operation",TwineScript_Unstorable:!0,TwineScript_Print:function(){return e&&l.create(e).render()}}},[w(u)])(["a","array"],function(){for(var e=arguments.length,t=Array(e>1?e-1:0),n=1;e>n;n++)t[n-1]=arguments[n];return t},T(S))("range",function e(t,n,r){if(n>r)return e(t,r,n);var i=[n];for(r-=n;r-->0;)i.push(++n);return i},[parseInt,parseInt])("subarray",function(e,t,n,r){return p(t,n,r)},[Array,parseInt,parseInt])("shuffled",function(){for(var e=arguments.length,t=Array(e>1?e-1:0),n=1;e>n;n++)t[n-1]=arguments[n];return t.reduce(function(e,t,n){var r=Math.random()*(n+1)|0;return r===n?e.push(t):(e.push(e[r]),e[r]=t),e},[]).map(y)},[S,w(S)])("sorted",function(){for(var e=arguments.length,n=Array(e>1?e-1:0),r=1;e>r;r++)n[r-1]=arguments[r];return n.sort(t("en"))},[x(Number,String),w(x(Number,String))])("rotated",function(e,t){for(var n=arguments.length,r=Array(n>2?n-2:0),i=2;n>i;i++)r[i-2]=arguments[i];return t*=-1,0===t?c.create("macrocall","I can't rotate these values by 0 positions."):Math.abs(t)>=r.length?c.create("macrocall","I can't rotate these "+r.length+" values by "+t+" positions."):r.slice(t).concat(r.slice(0,t)).map(y)},[parseInt,S,w(S)])("repeated",function(e,t){for(var n=arguments.length,r=Array(n>2?n-2:0),i=2;n>i;i++)r[i-2]=arguments[i];if(0>=t)return c.create("macrocall","I can't repeat these values "+t+" times.");for(var o=[];t-->0;)o.push.apply(o,r);return o.map(y)},[parseInt,w(S)])("interlaced",function(){for(var e=arguments.length,t=Array(e>1?e-1:0),n=1;e>n;n++)t[n-1]=arguments[n];for(var r=Math.min.apply(Math,_toConsumableArray(t.map(function(e){return e.length}))),i=[],o=0;r>o;o+=1)for(var a=0;a<t.length;a+=1)i.push(y(t[a][o]));return i},[Array,w(Array)]),n.add("altered",function(e,t){for(var n=arguments.length,r=Array(n>2?n-2:0),i=2;n>i;i++)r[i-2]=arguments[i];return r.map(function(n){return t.apply(e,{loop:n})})},[s.TypeSignature("via"),w(S)])("find",function(e,t){for(var n=arguments.length,r=Array(n>2?n-2:0),i=2;n>i;i++)r[i-2]=arguments[i];return t.filter(e,r)},[s.TypeSignature("where"),w(S)])("all-pass",function(e,t){for(var n=arguments.length,r=Array(n>2?n-2:0),i=2;n>i;i++)r[i-2]=arguments[i];var o=t.filter(e,r);return c.containsError(o)||o.length===r.length},[s.TypeSignature("where"),w(S)])("some-pass",function(e,t){for(var n=arguments.length,r=Array(n>2?n-2:0),i=2;n>i;i++)r[i-2]=arguments[i];var o=t.filter(e,r);return c.containsError(o)||o.length>0},[s.TypeSignature("where"),w(S)])("none-pass",function(e,t){for(var n=arguments.length,r=Array(n>2?n-2:0),i=2;n>i;i++)r[i-2]=arguments[i];var o=t.filter(e,r);return c.containsError(o)||0===o.length},[s.TypeSignature("where"),w(S)])("folded",function(e,t){for(var n=arguments.length,r=Array(n>2?n-2:0),i=2;n>i;i++)r[i-2]=arguments[i];return"where"in t&&(r=t.filter(e,r)),c.containsError(r)||r.reduce(function(n,r){return t.apply(e,{making:n,loop:r})})},[x(s.TypeSignature("where via making"),s.TypeSignature("via making")),w(S)]),n.add("datanames",function(e,n){return Array.from(n.keys()).sort(t("en"))},[Map])("datavalues",function(e,n){return Array.from(n.entries()).sort(function(e,n){return[e[0],n[0]].sort(t("en"))[0]===e[0]?-1:1}).map(function(e){return y(e[1])})},[Map])("dataentries",function(e,n){return Array.from(n.entries()).sort(function(e,n){return[e[0],n[0]].sort(t("en"))[0]===e[0]?-1:1}).map(function(e){return new Map([["name",e[0]],["value",y(e[1])]])})},[Map])("history",function(){return i.pastPassageNames()},[])("passage",function(e,t){return y(a.get(t||i.passage))||c.create("macrocall","There's no passage named '"+t+"' in this story.")},[b(String)])("savedgames",function(){function e(e){return"("+e+" "+o.options.ifid+") "}var t=0,n=void 0,r=new Map;do{n=localStorage.key(t),t+=1;var i=e("Saved Game");n&&n.startsWith(i)&&(n=n.slice(i.length),r.set(n,localStorage.getItem(e("Saved Game Filename")+n)))}while(n);return r},[])(["datamap","dm"],function(){for(var e=arguments.length,t=Array(e>1?e-1:0),n=1;e>n;n++)t[n-1]=arguments[n];var r=void 0,i=new Map,o=t.reduce(function(e,t){var n=void 0;if(c.containsError(e))return e;if(void 0===r)r=t;else{if(n=c.containsError(h(i,r)))return n;if(i.has(r))return c.create("macrocall","You used the same data name ("+f(r)+") twice in the same (datamap:) call.");i.set(r,y(t)),r=void 0}return e},!0);return c.containsError(o)?o:void 0!==r?c.create("macrocall","This datamap has a data name without a value."):i},T(S))(["dataset","ds"],function(){for(var e=arguments.length,t=Array(e>1?e-1:0),n=1;e>n;n++)t[n-1]=arguments[n];return new Set(t.filter(g).map(y))},T(S))("count",function e(t,n){for(var r=arguments.length,i=Array(r>2?r-2:0),o=2;r>o;o++)i[o-2]=arguments[o];if(i.length>1){var a=void 0,s=i.map(function(r){return e(t,n,r)});return(a=c.containsError(s))?a:s.reduce(function(e,t){return e+t},0)}var u=i[0];switch(d(n)){case"dataset":case"datamap":return c.create("macrocall","(count:) shouldn't be given a datamap or dataset.","You should use the 'contains' operator instead. For instance, write: $variable contains 'value'.");case"string":return"string"!=typeof u?c.create("macrocall",f(n)+" can't contain  "+f(u)+" because it isn't a string."):u?n.split(u).length-1:0;case"array":return n.reduce(function(e,t){return e+m(t,u)},0);default:return c.create("macrocall",f(n)+" can't contain values, let alone "+f(u)+".")}},[S,w(S)])}),define("macrolib/stylechangers",["jquery","macros","utils","utils/selectors","datatypes/colour","datatypes/changercommand","datatypes/lambda","internaltypes/changedescriptor","internaltypes/twineerror"],function(e,t,n,r,i,o,a,s,u){var c=t.TypeSignature,l=c.either,f=c.wrapped,p=c.rest,d=c.Any,h=[f(Boolean,'If you gave a number, you may instead want to check that the number is not 0. If you gave a string, you may instead want to check that the string is not "".')];e(function(){return e(n.storyElement).on("mouseenter.hover-macro","[hover=false]",function(){var t=e(this),n=t.data("hoverChanger");t.data({mouseoutStyle:t.attr("style")||""}),s.create({target:t},n).update(),t.attr("hover",!0)}).on("mouseleave.hover-macro","[hover=true]",function(){var t=e(this),n=t.data("mouseoutStyle");t.attr("style",n).removeData("mouseoutStyle").attr("hover",!1)})});var m=["dissolve","shudder","pulse"];t.addChanger("if",function(e,t){return o.create("if",[t])},function(e,t){return e.enabled=e.enabled&&t},h)("unless",function(e,t){return o.create("unless",[!t])},function(e,t){return e.enabled=e.enabled&&t},h)("elseif",function(e,t){return"lastHookShown"in e.stack[0]?o.create("elseif",[e.stack[0].lastHookShown===!1&&!!t]):u.create("macrocall","There's no (if:) or something else before this to do (else-if:) with.")},function(e,t){return e.enabled=e.enabled&&t},h)("else",function(e){return"lastHookShown"in e.stack[0]?o.create("else",[e.stack[0].lastHookShown===!1]):u.create("macrocall","There's nothing before this to do (else:) with.")},function(e,t){return e.enabled=e.enabled&&t},null)("hidden",function(){return o.create("hidden")},function(e){return e.enabled=!1},null)("hook",function(e,t){return o.create("hook",[t])},function(e,t){return e.attr.push({name:t})},[String])(["for","loop"],function(e,t){for(var n=arguments.length,r=Array(n>2?n-2:0),i=2;n>i;i++)r[i-2]=arguments[i];return t.loop?o.create("for",[t,r]):u.create("macrocall","The lambda provided to (for:) must refer to a temp variable, not just 'it'.")},function(e,t,n){return e.loopVars[t.loop]=t.filter(e.section,n)},[a.TypeSignature("where"),p(d)])(["transition","t8n"],function(e,t){return t=n.insensitiveName(t),-1===m.indexOf(t)?u.create("macrocall","'"+t+"' is not a valid (transition:)","Only the following names are recognised (capitalisation and hyphens ignored): "+m.join(", ")):o.create("transition",[t])},function(e,t){return e.transition=t,e},[String])(["transition-time","t8n-time"],function(e,t){return 0>=t?u.create("macrocall","(transition-time:) should be a positive number of (milli)seconds, not "+t):o.create("transition-time",[t])},function(e,t){return e.transitionTime=t,e},[Number])("font",function(e,t){return o.create("font",[t])},function(e,t){return e.styles.push({"font-family":t}),e},[String])("align",function(e,t){var n=void 0,r=t.indexOf("><");if(!/^(==+>|<=+|=+><=+|<==+>)$/.test(t))return u.create("macrocall",'The (align:) macro requires an alignment arrow ("==>", "<==", "==><=" etc.) be provided, not "'+t+'"');if(~r){var i=Math.round(r/(t.length-2)*50);n=Object.assign({"text-align":"center","max-width":"50%"},25===i?{"margin-left":"auto","margin-right":"auto"}:{"margin-left":i+"%"})}else n="<"===t[0]&&">"===t.slice(-1)?{"text-align":"justify","max-width":"50%"}:t.includes(">")?{"text-align":"right"}:{"text-align":"left"};return n.display="block",o.create("align",[n])},function(e,t){e.styles.push(t)},[String])(["text-colour","text-color","color","colour"],function(e,t){return i.isPrototypeOf(t)&&(t=t.toRGBAString(t)),o.create("text-colour",[t])},function(e,t){return e.styles.push({color:t}),e},[l(String,i)])("text-rotate",function(e,t){return o.create("text-rotate",[t])},function(t,n){return t.styles.push({display:"inline-block",transform:function(){var t=e(this).css("transform")||"";return"none"===t&&(t=""),t+" rotate("+n+"deg)"}}),t},[Number])("background",function(e,t){return i.isPrototypeOf(t)&&(t=t.toRGBAString(t)),o.create("background",[t])},function(t,r){var o=void 0;return o=i.isHexString(r)||i.isCSS3Function(r)?{"background-color":r}:{"background-size":"cover","background-image":"url("+r+")"},t.styles.push(o,{display:function(){return n.childrenProbablyInline(e(this))?"initial":"block"}}),t},[l(String,i)]).apply(void 0,_toConsumableArray(function(){var t={color:"transparent"},r=Object.assign(Object.create(null),{none:{},bold:{"font-weight":"bold"},italic:{"font-style":"italic"},underline:{"text-decoration":"underline"},strike:{"text-decoration":"line-through"},superscript:{"vertical-align":"super","font-size":".83em"},subscript:{"vertical-align":"sub","font-size":".83em"},blink:{animation:"fade-in-out 1s steps(1,end) infinite alternate"},shudder:{animation:"shudder linear 0.1s 0s infinite",display:"inline-block"},mark:{"background-color":"hsla(60, 100%, 50%, 0.6)"},condense:{"letter-spacing":"-0.08em"},expand:{"letter-spacing":"0.1em"},outline:[{"text-shadow":function(){var t=e(this).css("color");return"-1px -1px 0 "+t+", 1px -1px 0 "+t+",-1px  1px 0 "+t+", 1px  1px 0 "+t}},{color:function(){for(var t=e(this);t.length&&t[0]!==document;t=t.parent()){var n=t.css("background-color");if("transparent"!==n&&!n.match(/^\w+a\(.+?,\s*0\s*\)$/))return n}return"#fff"}}],shadow:{"text-shadow":function(){return"0.08em 0.08em 0.08em "+e(this).css("color")}},emboss:{"text-shadow":function(){return"0.08em 0.08em 0em "+e(this).css("color")}},smear:[{"text-shadow":function(){var t=e(this).css("color");return"0em   0em 0.02em "+t+",-0.2em 0em  0.5em "+t+", 0.2em 0em  0.5em "+t}},t],blur:[{"text-shadow":function(){return"0em 0em 0.08em "+e(this).css("color")}},t],blurrier:[{"text-shadow":function(){return"0em 0em 0.2em "+e(this).css("color")},"user-select":"none"},t],mirror:{display:"inline-block",transform:"scaleX(-1)"},upsidedown:{display:"inline-block",transform:"scaleY(-1)"},fadeinout:{animation:"fade-in-out 2s ease-in-out infinite alternate"},rumble:{animation:"rumble linear 0.1s 0s infinite",display:"inline-block"}});return["text-style",function(e,t){return t=n.insensitiveName(t),t in r?o.create("text-style",[t]):u.create("macrocall","'"+t+"' is not a valid (text-style:)","Only the following names are recognised (capitalisation and hyphens ignored): "+Object.keys(r).join(", "))},function(e,t){return n.assertMustHave(r,[t]),e.styles="none"===t?[]:e.styles.concat(r[t]),e}]}()).concat([[String]]))("hover-style",function(e,t){var n=s.create(),r=(t.run(n),n.summary());return r+""=="styles"||r.every(function(e){return"styles"===e||"attr"===e})&&n.attr.every(function(e){return Object.keys(e)+""=="style"})?o.create("hover-style",[t]):u.create("macrocall","The changer given to (hover-style:) must only change the hook's style.")},function(e,t){return e.data.hoverChanger=t,e.attr.push({hover:!1}),e},[o])("css",function(e,t){return t.trim().endsWith(";")||(t+=";"),o.create("css",[t])},function(t,n){return t.attr.push({
 style:function(){return(e(this).attr("style")||"")+n}}),t},[String])}),define("internaltypes/enchantment",["jquery","utils","internaltypes/changedescriptor"],function(e,t,n){var r={create:function(n){return t.assertOnlyHas(n,["scope","section","attr","data","changer","functions"]),Object.assign(Object.create(this),{enchantments:e()},n)},enchantScope:function(){var r=this,i=this.attr,o=this.data,a=this.functions,s=this.section,u=this.changer,c=this.scope;c instanceof e&&(c=Array.prototype.map.call(c,function(t){return e(t)})),this.enchantments=e(),c.forEach(s,function(e){var c=e.wrapAll("<tw-enchantment>").parent();if(i&&c.attr(i),o&&c.data(o),a&&a.forEach(function(e){return e(c)}),u){var l=n.create({section:s,target:c});if(u.run(l),l.update(),e.is(t.storyElement)){var f=Object.keys(Object.assign.apply(Object,[{}].concat(_toConsumableArray(l.styles))));e.css(f.reduce(function(e,t){return e[t]="inherit",e},{})),c.data({enchantedProperties:f})}}e.is(t.storyElement)&&c.css({width:"100%",height:"100%"}),r.enchantments=r.enchantments.add(c)})},disenchant:function(){this.enchantments.each(function(){var n=e(this).contents();n.unwrap();var r=e(this).data("enchantedProperties");r&&n.has(t.storyElement)&&t.storyElement.css(r.reduce(function(e,t){return e[t]="",e},{}))})}};return Object.freeze(r)}),define("macrolib/enchantments",["jquery","utils","utils/selectors","utils/operationutils","macros","datatypes/hookset","datatypes/changercommand","internaltypes/enchantment","internaltypes/twineerror"],function(e,t,n,r,i,o,a,s,u){function c(n,r){return e(function(){t.storyElement.on(n.event+".enchantment","."+n.classList.replace(/ /g,"."),function(){var t=e(this),n=t.data("enchantmentEvent");n&&n(t)})}),[function(){for(var e=arguments.length,t=Array(e>1?e-1:0),n=1;e>n;n++)t[n-1]=arguments[n];return t.every(Boolean)?a.create(r,t.map(o.from)):u.create("datatype","A string given to this ("+r+":) macro was empty.")},function(e,t){e.enabled=!1,n.rerender&&(e.newTargets=(e.newTargets||[]).concat({target:t,append:n.rerender}));var r=s.create({functions:[function(e){e.attr("class",e.children().is("tw-story, tw-sidebar, tw-passage")?n.blockClassList:n.classList)}],attr:(n.classList+"").match(/\b(?:link|enchantment-clickblock)\b/)?{tabIndex:"0"}:{},data:{enchantmentEvent:function(){if(n.once){var t=e.section.enchantments.indexOf(r);e.section.enchantments.splice(t,1),r.disenchant()}e.section.renderInto(e.source,null,Object.assign({},e,{enabled:!0}))}},scope:t,section:e.section});return e.section.enchantments.push(r),r.enchantScope(),e},p(o,String)]}var l=r.is,f=i.TypeSignature,p=f.either,d=f.rest;i.add("enchant",function(e,t,n){return{TwineScript_ObjectName:"an (enchant:) command",TwineScript_TypeName:"an (enchant:) command",TwineScript_Print:function(){var r=n.summary();if(r.includes("newTargets")||r.includes("target"))return u.create("macrocall","The changer given to (enchant:) can't include a revision command like (replace:) or (append:).");var i=s.create({scope:o.from(t),changer:n,section:e});return e.enchantments.push(i),i.enchantScope(),""}}},[p(o,String),a]);var h=["replace","append","prepend"];h.forEach(function(t){i.addChanger(t,function(){for(var e=arguments.length,n=Array(e>1?e-1:0),r=1;e>r;r++)n[r-1]=arguments[r];return n.every(Boolean)?a.create(t,n.map(o.from)):u.create("datatype","A string given to this ("+t+":) macro was empty.")},function(n){for(var r,i=arguments.length,o=Array(i>1?i-1:0),a=1;i>a;a++)o[a-1]=arguments[a];var s=e(n.target).parents().filter("tw-collapsed").length>0;return s||(n.attr=[].concat(_toConsumableArray(n.attr),[{collapsing:!1}])),n.newTargets=n.newTargets||[],(r=n.newTargets).push.apply(r,_toConsumableArray(o.filter(function(e){return!n.newTargets.some(function(n){var r=n.target,i=n.append;return l(e,r)&&t===i})}).map(function(e){return{target:e,append:t}}))),n},d(p(o,String)))}),e(function(){t.storyElement.on("click.enchantment",function(){Array.from(e(this).parents(".enchantment-clickblock")).sort(function(e,t){return 8&e.compareDocumentPosition(t)?1:-1}).forEach(function(t){var n=e(t).data("enchantmentEvent");n&&n()})})});var m=[{name:"click",enchantDesc:{event:"click",once:!0,rerender:"",classList:"link enchantment-link",blockClassList:"enchantment-clickblock"}},{name:"mouseover",enchantDesc:{event:"mouseenter",once:!0,rerender:"",classList:"enchantment-mouseover"}},{name:"mouseout",enchantDesc:{event:"mouseleave",once:!0,rerender:"",classList:"enchantment-mouseout"}}];m.forEach(function(e){return i.addChanger.apply(i,[e.name].concat(_toConsumableArray(c(e.enchantDesc,e.name))))}),h.forEach(function(e){m.forEach(function(t){var n=Object.assign({},t.enchantDesc,{rerender:e}),r=t.name+"-"+e;i.addChanger.apply(i,[r].concat(_toConsumableArray(c(n,r))))})})}),define("macrolib/links",["jquery","macros","utils","utils/selectors","state","passages","engine","datatypes/changercommand","internaltypes/twineerror"],function(e,t,n,r,i,o,a,s,u){var c=t.TypeSignature.optional,l="Links can't have empty strings for their displayed text.";e(function(){return e(n.storyElement).on("click.passage-link",r.internalLink,function(){var t=e(this),n=t.parent().data("clickEvent");if(n)return void n(t);var r=t.attr("passage-name");return r?void a.goToPassage(r,!1):t.is("[undo]")?void a.goBack():void 0})}),[["link","link-replace"],["link-reveal"],["link-repeat"]].forEach(function(e){return t.addChanger(e,function(t,n){return n?s.create(e[0],[n]):u.create("macrocall",l)},function(t,n){t.innerSource||(t.innerSource=t.source),t.source="<tw-link tabindex=0>"+n+"</tw-link>",t.append="link"===e[0]?"replace":"append",t.data.clickEvent=function(n){t.source=t.innerSource,t.section.renderInto(t.innerSource+"",null,t),"link-reveal"===e[0]&&n.contents().unwrap()}},[String])}),t.add(["link-goto"],function(t,r,a){return r?{TwineScript_TypeName:"a (link-goto: "+n.toJSLiteral(r)+", "+n.toJSLiteral(a)+") command",TwineScript_ObjectName:"a (link-goto:) command",TwineScript_Print:function(){var s=t.evaluateTwineMarkup(n.unescape(a||r));if(s instanceof e)return s;if(!o.has(s))return'<tw-broken-link passage-name="'+n.escape(s)+'">'+(r||a)+"</tw-broken-link>";var u=i.passageNameVisited(s);return"<tw-link tabindex=0 "+(u>0?'class="visited" ':"")+'passage-name="'+n.escape(s)+'">'+(r||a)+"</tw-link>"}}:u.create("macrocall",l)},[String,c(String)])("link-undo",function(e,t){return t?{TwineScript_ObjectName:"a (link-undo:"+n.toJSLiteral(t)+") command",TwineScript_TypeName:"a (link-undo:) command",TwineScript_Print:function(){return i.pastLength<1?u.create("macrocall","I can't use (link-undo:) on the first turn."):"<tw-link tabindex=0 undo>"+t+"</tw-link>"}}:u.create("macrocall",l)},[String])}),define("repl",["utils","markup","twinescript/compiler","twinescript/environ"],function(e,t,n,r){window.REPL=function(e){var i=n(t.lex("(print:"+e+")"));console.log(i);var o=r({}).eval(i);return o.TwineScript_Print?o.TwineScript_Print():o},window.LEX=function(e){var n=t.lex(e);return 1===n.length?n[0]:n}}),require.config({paths:{jquery:"../node_modules/jquery/dist/jquery",almond:"../node_modules/almond/almond","es6-shim":"../node_modules/es6-shim/es6-shim",requestAnimationFrame:"../node_modules/requestanimationframe/app/requestAnimationFrame",jqueryplugins:"utils/jqueryplugins",markup:"./markup/markup",lexer:"./markup/lexer",patterns:"./markup/patterns"},deps:["jquery","es6-shim","jqueryplugins"]}),require(["jquery","debugmode","renderer","state","engine","passages","utils/selectors","macros","macrolib/values","macrolib/commands","macrolib/datastructures","macrolib/stylechangers","macrolib/enchantments","macrolib/links","repl"],function($,DebugMode,Renderer,State,Engine,Passages,Selectors){function _eval(text){return eval(text+"")}var _installHandlers=function(){var e=$(document.documentElement);e.on("keydown",function(e){13===e.which&&"0"===e.target.getAttribute("tabindex")&&$(e.target).trigger("click")}),Engine.options.debug&&DebugMode(),_installHandlers=null};!function(e){window.onerror=function(t,n,r,i,o){var a=o&&o.stack&&"\n"+o.stack.replace(/\([^\)]+\)/g,"")+"\n"||"("+t+")\n";alert("Sorry to interrupt, but this page's code has got itself in a mess. "+a+"(This is probably due to a bug in the Harlowe game engine.)"),window.onerror=e,"function"==typeof e&&e.apply(void 0,arguments)}}(window.onerror),$(function(){var e=$(Selectors.storyData);if(0!==e.length){var t=e.attr("options");t&&t.split(/\s/).forEach(function(e){Renderer.options[e]=Engine.options[e]=!0});var n=e.attr("startnode");return Renderer.options.ifid=Engine.options.ifid=e.attr("ifid"),n||(n=[].reduce.call($(Selectors.passageData),function(e,t){var n=t.getAttribute("pid");return e>n?n:e},1/0)),n=$(Selectors.passageData+"[pid="+n+"]").attr("name"),_installHandlers(),$(Selectors.script).each(function(e){try{_eval($(this).html())}catch(t){alert("There is a problem with this story's script (#"+(e+1)+"):\n\n"+t.message)}}),$(Selectors.stylesheet).each(function(e){$(document.head).append('<style data-title="Story stylesheet '+(e+1)+'">'+$(this).html())}),window.location.hash&&!window.location.hash.includes("stories")&&State.load(window.location.hash)?void Engine.showPassage(State.passage):void Engine.goToPassage(n)}})}),define("harlowe",function(){}),require(["harlowe"])}();</script>
-
 
 </body>
 </html>
