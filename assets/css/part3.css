@@ -220,10 +220,11 @@
     height: 320px;
     transform: rotate(5deg);
     color: black;
-    left: 650px;
-    bottom: 130px;
+    left: 670px;
+    bottom: 120px;
     z-index: +1;
     position: absolute;
+    border: solid black 2px;
 }
 .caption {
     left: 80px;
