@@ -1,3 +1,44 @@
 .room{
     background-image: url("../../images/pt1.jpg");
 }
+.note{
+    background: transparent;
+    position: absolute;
+}
+.note img{
+    background: transparent;
+    height: 5%;
+    width: 5%;
+    filter: blur(0.8px);
+}
+#note1{
+    bottom: 20%;
+    left: 10%;
+}
+#note2{
+    bottom: 25%;
+    left: 15%;
+    filter: sepia(90%);
+}
+#note3{
+    bottom: 35%;
+    left: 18%;
+    transform: rotate(-10deg)
+}
+.bookStack{
+    position: absolute;
+    bottom: 20%;
+    left: 43%;
+    height: 20%;
+    background: transparent;
+    filter: sepia(70%) blur(3px);
+}
+.smallCards{
+    background: transparent;
+    position: absolute;
+    height: 10%;
+    width: 10%;
+    bottom: 10%;
+    left: 20%;
+    filter: sepia(30%) blur(0.8px);
+}
