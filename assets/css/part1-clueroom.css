@@ -1,5 +1,5 @@
 .room{
-    background-image: url("../../images/pt1.jpg");
+    background-image: url("../../images/pt1.jpeg");
 }
 .note{
     background: transparent;
@@ -41,4 +41,66 @@
     bottom: 10%;
     left: 20%;
     filter: sepia(30%) blur(0.8px);
+}
+/* button */
+.button:hover{
+    cursor: pointer;
+}
+
+.note:hover{
+    cursor: pointer;
+}
+
+/* note is pressed */
+.note-pressed{
+    background: transparent;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    z-index: +1;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+.note-pressed img{
+    background: transparent;
+    height: 120%;
+}
+/* note 1 message */
+.note1-message{
+    text-align: center;
+    height: 40%;
+    width: 30%;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    background: transparent;
+    z-index: +1;
+}
+/* note 2 message */
+.note2-message{
+    text-align: center;
+    height: 40%;
+    width: 30%;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    background: transparent;
+    z-index: +1;
+}
+/* note 3 message */
+.note3-message{
+    text-align: center;
+    height: 40%;
+    width: 30%;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    background: transparent;
+    z-index: +1;
 }
