@@ -17,6 +17,13 @@
             See if you can help Sam by looking around the room! Good luck!<br><br><br>
             <a class="button">Start</a>
         </div>
+        <div class="jumbotron end" hidden>
+            Good Job Detective!<br><br>
+            You are done with this digital clue room! Looks like maybe Sam's report is somewhere else!<br><br>
+            Oh well! Maybe you'll come across it at some point!<br><br>
+            Hopefully she doesn't need it first period!<br><br><br>
+            <a href="https://carolinehardin.github.io/DigitalPrivacyDetectives/part1-clueroom.html" class="button">Back to Start</a>
+        </div>
     </div>
     <!-- background image -->
     <div class="room"></div>
@@ -33,32 +40,92 @@
     </div>
 
     <!-- stack of books in light -->
-    <img class="bookStack" src="images/bookStack.png" alt="bookStack">
+    <img class="bookStack" id="books" src="images/bookStack.png" alt="bookStack">
 
     <!-- note cards -->
-    <img class="smallCards" src="images/cards.png" alt="study cards">
+    <img class="cards" id="cards" src="images/cards.png" alt="study cards">
+
+    <!-- papers with secret clue on it -->
+    <img class="papers" src="images/papers.png" alt="papers" hidden>
+
+    <!-- note after pressed -->
+    <img class="note-pressed" src="images/stickyNote.png" alt="note" hidden>
+
+    <!-- note cards after pressed -->
+    <img class="cards-pressed" id="cards" src="images/cards.png" alt="study cards" hidden>
 
     <!-- message note 1 -->
+    <div class="note-writing note1-writing" hidden>
+        Don't forget your report on digital privacy! Remember to make stronger passwords and change account settings!
+    </div>
     <div class="note1-message" hidden>
-        You find a sticky note with a reminder on it!<br><br> 
-        It reads: "Don't forget your report on digital privacy! Remember to make stronger passwords next time!"<br><br> 
-        "Next time? Hmm I wonder what that could mean?" you think to yourself.<br><br><br>
+        You found a sticky note with a reminder on it!<br><br> 
+        It reads: "Don't forget your report on digital privacy! Remember to make stronger passwords and change account settings!"<br><br> 
+        Oh this must be referring to the photo that got out! Probably a good idea for Sam to update all account information and settings!<br><br>
+        Maybe it would be a good idea for you to double check that too!<br><br>
+        I wonder where that report could be?<br><br><br>
         <a class="button note1-next">Next</a>
     </div>
+
     <!-- message note 2 -->
+    <div class="note-writing note2-writing" hidden>
+        Jordan + Sam 4Ever <br> There is no one like you <br><br><br>Jordan  ♡<br> 2.14
+    </div>
     <div class="note2-message" hidden>
-        You find a sticky note with a reminder on it!<br><br> 
-        It reads: "Don't forget your report on digital privacy! Remember to make stronger passwords next time!"<br><br> 
-        "Next time? Hmm I wonder what that could mean?" you think to yourself.<br><br><br>
+        Looks like you found a Valentine's day note!<br><br> 
+        It reads: "Jordan + Sam 4Ever...There is no one like you...Jordan  ♡...2.14"<br><br>
+        Wow. Sam and Jordan looked like they were really in love!<br><br> 
+        I wonder how hard it will be for Jordan to get over Sam? Poor Jordan must be heartbroken...<br><br><br>
         <a class="button note2-next">Next</a>
     </div>
+
     <!-- message note 3 -->
+    <div class="note-writing note3-writing" hidden>
+        Reminder: Delete photos of me and Jordan or tuck them away in a locked folder
+    </div>
     <div class="note3-message" hidden>
-        You find a sticky note with a reminder on it!<br><br> 
-        It reads: "Don't forget your report on digital privacy! Remember to make stronger passwords next time!"<br><br> 
-        "Next time? Hmm I wonder what that could mean?" you think to yourself.<br><br><br>
+        You found another sticky note with a reminder on it!<br><br> 
+        It reads: "Reminder: Delete photos of me and Jordan or tuck them away in a locked folder"<br><br> 
+        Do you think the leaked photo could've been a personal photo between Sam and Jordan? Do you think it's a good idea for Sam to delete them?<br><br><br>
         <a class="button note3-next">Next</a>
     </div>
+
+    <!-- message cards -->
+    <div class="cards-message" hidden>
+        Hmm just looks like some blank note cards...<br><br> 
+        These could come in handy for a test!<br><br>
+        Doesn't really look Sam's report though. <br><br> 
+        Pretty interesting idea for a report! Maybe it would be worthwhile to read about Digital Privacy!<br><br><br>
+        <a class="button cards-next">Next</a>
+    </div>
+
+    <!-- books message -->
+    <div class="books-message" hidden>
+        What's this?<br><br> 
+        It looks like papers tucked in between the books!<br><br> 
+        Hmmm this doesnt look like Sam's report...it looks pretty private...do you still want to read it?<br><br><br>
+        <a class="accept papers-yes">Yes</a>
+        <a class="button papers-no">No</a>
+    </div>
+
+    <!-- papers message -->
+    <div class="papers-writing" hidden>
+        Sam,<br>
+        I miss you. I think about us everyday and just want everything to go back to the way things were.
+        I look back at our texts and wonder what went wrong. I know I can do better if you just give me one more chance! I would hate to see all of our memories go to waste. Those times we shared watching the game, the movies we used to go to, those photos we used to take.
+        Even if we never get back together, can you promise me you won't share those photos? They are just so personal between us. I hope yu keep them between us. I'm sorry for anything I did to make you want to end things. I miss you Sam <br>
+        - Jordan
+
+    </div>
+    <div class="papers-message" hidden>
+        This looks like a letter from Jordan to Sam!<br><br> 
+        It mentions Jordan not being able to get over Sam! And all of their memories together. Looks like they shared a lot together. Do you think the photos Jordan talked about could be the same photos that were leaked of Sam?<br><br> 
+        I wonder how Jordan reacted to all of this!<br><br><br>
+        <a class="button papers-next">Next</a>
+    </div>
+
+    <!-- button to finish -->
+    <a class="button finish" hidden>Finish</a>
 
     <script src="assets/js/jquery-3.4.1.js"></script>
     <script src="assets/js/clueroom.js"></script>
