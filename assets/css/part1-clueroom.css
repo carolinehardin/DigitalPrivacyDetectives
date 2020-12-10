@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 .room{
     background-image: url("../../images/pt1.jpeg");
 }
@@ -23,7 +25,7 @@
 #note3{
     bottom: 35%;
     left: 18%;
-    transform: rotate(-10deg)
+    transform: rotate(-10deg);
 }
 .bookStack{
     position: absolute;
@@ -33,7 +35,7 @@
     background: transparent;
     filter: sepia(70%) blur(3px);
 }
-.smallCards{
+.cards{
     background: transparent;
     position: absolute;
     height: 10%;
@@ -41,6 +43,13 @@
     bottom: 10%;
     left: 20%;
     filter: sepia(30%) blur(0.8px);
+}
+.cards-pressed{
+    position: absolute;
+    top: 25%;
+    left: 3%;
+    height: 70%;
+    z-index: +1;
 }
 /* button */
 .button:hover{
@@ -51,26 +60,28 @@
     cursor: pointer;
 }
 
-/* note is pressed */
+.cards:hover{
+    cursor: pointer;
+}
+
+.bookStack:hover{
+    cursor: pointer;
+}
+
 .note-pressed{
-    background: transparent;
     position: absolute;
     top: 20%;
-    left: 50%;
+    left: 10%;
+    height: 70%;
     z-index: +1;
-    transition-duration: 2s;
-    transition-timing-function: ease-in-out;
 }
-.note-pressed img{
-    background: transparent;
-    height: 120%;
-}
+
 /* note 1 message */
 .note1-message{
     text-align: center;
     height: 40%;
     width: 30%;
-    font-size: 20px;
+    font-size: 17px;
     font-family: 'Courier New', Courier, monospace;
     position: absolute;
     top: 30%;
@@ -83,7 +94,7 @@
     text-align: center;
     height: 40%;
     width: 30%;
-    font-size: 20px;
+    font-size: 17px;
     font-family: 'Courier New', Courier, monospace;
     position: absolute;
     top: 30%;
@@ -96,11 +107,90 @@
     text-align: center;
     height: 40%;
     width: 30%;
-    font-size: 20px;
+    font-size: 17px;
     font-family: 'Courier New', Courier, monospace;
     position: absolute;
     top: 30%;
     left: 55%;
     background: transparent;
     z-index: +1;
+}
+
+/* cards */
+.cards-message{
+    text-align: center;
+    height: 40%;
+    width: 30%;
+    font-size: 17px;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    background: transparent;
+    z-index: +1;
+}
+
+/* books message */
+.books-message{
+    background-color: transparent; 
+    position: absolute; 
+    top: 50%;
+    left: 50%; 
+    z-index: +1;
+    transform: translate(-50%, -50%);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 17px;
+    text-align: center;
+}
+
+/* papers */
+.accept{
+    color: #fff;
+    border: 1px solid #fff;
+    padding: .4em 1.5em;
+    text-decoration: none;
+    background-color: transparent; 
+}
+.accept:hover{
+    cursor: pointer;
+}
+.papers{
+    height: 92%;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    z-index: +1;
+}
+.papers-message{
+    text-align: center;
+    height: 40%;
+    width: 30%;
+    font-size: 17px;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    background: transparent;
+    z-index: +1;
+}
+.note-writing{
+    position: absolute;
+    top: 35%;
+    left: 16%;
+    transform: rotate(-9deg);
+    width: 24%;
+    z-index: +2;
+    color: black;
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+}
+.papers-writing{
+    position: absolute;
+    width: 20%;
+    top: 21.5%;
+    left: 24%;
+    z-index: +2;
+    color: black;
+    font-family: 'Indie Flower', cursive;
+    transform: rotate(3.5deg);
 }
