@@ -10,6 +10,7 @@ $('document').ready(function(){
     /* finish */
     $('.finish').click(function(){
         $('.finish').fadeOut(1000);
+        $('.hint').fadeOut(1000);
         $('.overlay').fadeIn(1000);
         $('.end').fadeIn(1000);
     });

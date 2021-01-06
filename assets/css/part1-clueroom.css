@@ -3,6 +3,17 @@
 .room{
     background-image: url("../../images/pt1.jpeg");
 }
+.hint{
+    position: absolute;
+    top: 5%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1.5%;
+    width: 95%;
+}
 .note{
     background: transparent;
     position: absolute;
@@ -48,7 +59,7 @@
     position: absolute;
     top: 25%;
     left: 3%;
-    height: 70%;
+    height: 60%;
     z-index: +1;
 }
 /* button */
@@ -79,7 +90,7 @@
 /* note 1 message */
 .note1-message{
     text-align: center;
-    height: 40%;
+    height: 60%;
     width: 30%;
     font-size: 17px;
     font-family: 'Courier New', Courier, monospace;
@@ -92,7 +103,7 @@
 /* note 2 message */
 .note2-message{
     text-align: center;
-    height: 40%;
+    height: 60%;
     width: 30%;
     font-size: 17px;
     font-family: 'Courier New', Courier, monospace;
@@ -105,7 +116,7 @@
 /* note 3 message */
 .note3-message{
     text-align: center;
-    height: 40%;
+    height: 60%;
     width: 30%;
     font-size: 17px;
     font-family: 'Courier New', Courier, monospace;
@@ -119,7 +130,7 @@
 /* cards */
 .cards-message{
     text-align: center;
-    height: 40%;
+    height: 60%;
     width: 30%;
     font-size: 17px;
     font-family: 'Courier New', Courier, monospace;
@@ -183,14 +194,4 @@
     color: black;
     font-family: 'Indie Flower', cursive;
     font-size: 30px;
-}
-.papers-writing{
-    position: absolute;
-    width: 20%;
-    top: 21.5%;
-    left: 24%;
-    z-index: +2;
-    color: black;
-    font-family: 'Indie Flower', cursive;
-    transform: rotate(3.5deg);
 }
