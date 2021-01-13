@@ -14,6 +14,7 @@ $('document').ready(function(){
         $('.note-pressed').fadeOut(500);
         $('.note1-message').fadeOut(500);
         $('.note1-writing').fadeOut(500);
+        $('.overlay').fadeOut(2000);
         $('#note1').fadeIn(2000);
         checked[0] = true;
         hint();
@@ -33,6 +34,7 @@ $('document').ready(function(){
         $('.note-pressed').fadeOut(500);
         $('.note2-message').fadeOut(500);
         $('.note2-writing').fadeOut(500);
+        $('.overlay').fadeOut(2000);
         $('#note2').fadeIn(2000);
         checked[1] = true;
         hint();
@@ -52,6 +54,7 @@ $('document').ready(function(){
         $('.note-pressed').fadeOut(500);
         $('.note3-message').fadeOut(500);
         $('.note3-writing').fadeOut(500);
+        $('.overlay').fadeOut(2000);
         $('#note3').fadeIn(2000);
         checked[2] = true;
         hint();
@@ -68,6 +71,7 @@ $('document').ready(function(){
     $('.cards-next').click(function(){
         $('.cards-pressed').fadeOut(500);
         $('.cards-message').fadeOut(500);
+        $('.overlay').fadeOut(2000);
         $('.cards').fadeIn(2000);
         checked[3] = true;
         hint();
@@ -82,6 +86,7 @@ $('document').ready(function(){
 
     $('.papers-no').click(function(){
         $('.books-message').fadeOut(500);
+        $('.overlay').fadeOut(2000);
         checked[4] = true;
         hint();
     });
@@ -96,7 +101,14 @@ $('document').ready(function(){
     $('.papers-next').click(function(){
         $('.papers').fadeOut(500);
         $('.papers-message').fadeOut(500);
+        $('.overlay').fadeOut(2000);
         hint();
+    });
+
+    /* finish */
+    $('.finish').click(function(){
+        $('.hint').fadeOut(1000);
+        $('.overlay').fadeIn(1000);
     });
 
     function hint(){

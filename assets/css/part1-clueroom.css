@@ -62,10 +62,6 @@
     height: 60%;
     z-index: +1;
 }
-/* button */
-.button:hover{
-    cursor: pointer;
-}
 
 .note:hover{
     cursor: pointer;
