@@ -1,3 +1,114 @@
-.room{
+.room {
     background-image: url("../../images/pt3.PNG");
+}
+
+.notification {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: +1;
+}
+
+.notify {
+    background-color: powderblue;
+    height: 50px;
+    padding-top: 10px;
+    border-radius: 15px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-family: helvetica;
+}
+
+.complete {
+    background-color: aliceblue;
+    font-size: 17px;
+    color: gray;
+    height: 20px;
+    padding: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-family: helvetica;
+}
+
+.complete b {
+    color: gray;
+}
+
+.email-bg {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 60%;
+    width: 50%;
+    z-index: +1;
+    border-radius: 2%;
+    border-top: solid powderblue 10vh;
+}
+
+.email-list {
+    background-color: aliceblue;
+    font-family: helvetica;
+    z-index: +1;
+    height: 60vh;
+    width: 10vw;
+    border-collapse: collapse;
+    border-bottom-left-radius: 1vh;
+    float: left;
+}
+
+.email-tab b {
+    color: gray;
+}
+
+.email-tab {
+    color: gray;
+    text-align: center;
+    border-right: solid white 0.5vh;
+    border-top: solid white 0.5vh;
+    border-bottom-left-radius: 1vh;
+}
+
+.email-tab:hover {
+    background-color: white;
+}
+
+.selected {
+    background-color: mintcream;
+}
+
+.selected .email-tab, .selected .email-tab b {
+    color: #484442;
+}
+
+.email-text {
+    height: 60vh;
+    width: 40vw;
+    float: right;
+    border-bottom-right-radius: 1vh;
+    font-family: helvetica;
+    overflow: scroll;
+}
+
+.subject {
+    padding: 0.5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: azure;
+}
+
+.subject h3, .subject p {
+    color: #484442;
+}
+
+.content {
+    padding: 2%;
+    color: #484442;
+}
+
+.finish{
+    z-index: +1;
 }
