@@ -17,7 +17,7 @@ $('document').ready(function () {
     /* email functionality */
     let tabs = ['#tab-1', '#tab-2', '#tab-3', '#tab-4'];
     let emails = ['#email-1', '#email-2', '#email-3', '#email-4'];
-    var currEmail;
+    var currEmail = emails[0];
     $('.bg-email-tab').click(function () {
         var id = '#' + $(this).attr('id');
         for (var i = 0; i < tabs.length; i++) {
