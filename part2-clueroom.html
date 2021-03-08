@@ -12,15 +12,47 @@
     <div class="overlay">
         <div class="jumbotron">
             Digital Clue Room | Part 2<br><br>
-            Detective! On your way to school, you stop by Sam's place to pick up some things you left the last time you were over!<br><br>
-            While you're there, you decide to take a look around and see if you can find out what's going on with Sam!<br><br>
-            See if you can search the room for any clues! Good luck!<br><br><br>
-            <a href="#" class="button">Start</a>
+            Hmmm looks like the report wasn't in Sam's room!<br><br>
+            You head to school and find that you have some time before class to walk around the halls.<br><br>
+            There seems to be a lot of trash all over the place! Maybe try helping out the custodian and picking some up!<br><br><br>
+            <a class="button start">Start</a>
+        </div>
+        <div class="jumbotron end" hidden>
+            Good Job Detective!<br><br>
+            You are done with this digital clue room! Great job finding Sam's report!<br><br>
+            Better tell Sam you got it and head over to class!<br><br>
+            You don't want to be late for study hall!<br><br><br>
+            <a href="https://carolinehardin.github.io/DigitalPrivacyDetectives/part2-clueroom.html" class="button">Back to Start</a>
         </div>
     </div>
+    <!-- background image -->
     <div class="room"></div>
+
+    <img class="trashCan" src="images/trashCan.png" alt="trashCan">
+
+    <img class="trash" id="trash-1" src="images/trash.png" alt="trash">
+    <img class="trash" id="trash-2" src="images/trash.png" alt="trash">
+    <img class="trash" id="trash-3" src="images/trash.png" alt="trash">
+    <img class="trash" id="trash-4" src="images/trash.png" alt="trash">
+    <img class="trash" id="trash-5" src="images/trash.png" alt="trash">
+
+    <img class="report" src="images/report.png" hidden></img>
+
+    <div class="message" hidden>
+        What's this?<br><br><br>
+        <a class="button next">Next</a>
+    </div>
+
+    <div class="report-message" hidden>
+        Woah! Wait a second! It's Sam's report!<br><br>
+        I guess Sam didn't forget it at home! But instead dropped it heading to class!<br><br>
+        Hmm that's weird . . . do you notice anything off about Sam's report?<br><br>
+        This must be a first draft! I don't think Sam would turn in this copy. Maybe it would be good to check in and see how Sam is doing?<br><br>
+        <a class="button finish" hidden>Finish</a>
+    </div>
 
     <script src="assets/js/jquery-3.4.1.js"></script>
     <script src="assets/js/clueroom.js"></script>
+    <script src="assets/js/part2-clueroom.js"></script>
 </body>
 </html>
