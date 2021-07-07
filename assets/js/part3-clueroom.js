@@ -7,12 +7,12 @@ $('document').ready(function () {
         $('.notify-message').delay(3500).fadeIn(1000);
     });
 
-    /* notification next */
+    /* notification next
     $('.notify-next').click(function () {
         $('.notification').fadeOut(500);
         $('.notify-message').fadeOut(500);
         $('.email').fadeIn(500);
-    });
+    });*/
 
     /* email functionality */
     let tabs = ['#tab-1', '#tab-2', '#tab-3', '#tab-4'];
