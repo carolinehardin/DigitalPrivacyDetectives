@@ -9,117 +9,40 @@
     
 </head>
 <body>
-    <div class="overlay">
-        <div class="jumbotron">
-            Digital Clue Room | Part 1<br><br>
-            Detective! On your way to school, Sam texts you asking you to stop by her place to look for her missing report!<br><br>
-            While you're there, you realize you don't really know where anything is!<br><br>
-            See if you can help Sam by looking around the room! Good luck!<br><br><br>
-            <a class="button start">Start</a>
-        </div>
-        <div class="jumbotron end" hidden>
-            Good Job Detective!<br><br>
-            You are done with this digital clue room! Looks like maybe Sam's report is somewhere else?<br><br>
-            Oh well! Maybe you'll come across it at some point later.<br><br>
-            Hopefully she doesn't need it first period!<br><br><br>
-            <a href="https://carolinehardin.github.io/DigitalPrivacyDetectives/part1.html" class="button">Back to Start</a>
-        </div>
-    </div>
     <!-- background image -->
     <div class="room"></div>
 
     <!-- notes on the wall -->
     <div class="note" id="note1">
-        <img src="images/stickyNote.png" alt="note">
+        <a href="part1-clues/part1-note1.html"><img src="images/stickyNote.png" alt="note"></a>
     </div>
     <div class="note" id="note2">
-        <img src="images/stickyNote.png" alt="note">
+        <a href="part1-clues/part1-note2.html"><img src="images/stickyNote.png" alt="note"></a>
     </div>
     <div class="note" id="note3">
-        <img src="images/stickyNote.png" alt="note">
+        <a href="part1-clues/part1-note3.html"><img src="images/stickyNote.png" alt="note"></a>
     </div>
 
     <!-- stack of books in light -->
     <img class="bookStack" id="books" src="images/bookStack.png" alt="bookStack">
 
     <!-- note cards -->
-    <img class="cards" id="cards" src="images/cards.png" alt="study cards">
-
-    <!-- papers with secret clue on it -->
-    <img class="papers" src="images/papers.png" alt="papers" hidden>
-
-    <!-- note after pressed -->
-    <img class="note-pressed" src="images/stickyNote.png" alt="note" hidden>
-
-    <!-- note cards after pressed -->
-    <img class="cards-pressed" id="cards" src="images/cards.png" alt="study cards" hidden>
+    <a href="part1-clues/part1-cards.html"><img class="cards" id="cards" src="images/cards.png" alt="study cards"></a>
 
     <!-- hint -->
     <div class="hint" hidden>Maybe the report isn't even here...</div>
-
-    <!-- message note 1 -->
-    <div class="note-writing note1-writing" hidden>
-        Don't forget your report on digital privacy! Remember to make stronger passwords and change account settings!
-    </div>
-    <div class="note1-message" hidden>
-        You found a sticky note with a reminder on it!<br><br> 
-        It reads: "Don't forget your report on digital privacy! Remember to make stronger passwords and change account settings!"<br><br> 
-        Oh this must be referring to the photo that got out! Probably a good idea for Sam to update all account information and settings!<br><br>
-        Maybe it would be a good idea for you to double check that too!<br><br>
-        I wonder where that report could be?<br><br><br>
-        <a class="button note1-next">Next</a>
-    </div>
-
-    <!-- message note 2 -->
-    <div class="note-writing note2-writing" hidden>
-        Jordan + Sam 4Ever <br> There is no one like you <br><br><br>Jordan  ♡<br> 2.14
-    </div>
-    <div class="note2-message" hidden>
-        Looks like you found a Valentine's day note!<br><br> 
-        It reads: "Jordan + Sam 4Ever...There is no one like you...Jordan  ♡...2.14"<br><br>
-        Wow. Sam and Jordan looked like they were really in love!<br><br> 
-        I wonder how hard it will be for Jordan to get over Sam? Poor Jordan must be heartbroken...<br><br><br>
-        <a class="button note2-next">Next</a>
-    </div>
-
-    <!-- message note 3 -->
-    <div class="note-writing note3-writing" hidden>
-        Reminder: Delete photos of me and Jordan or tuck them away in a locked folder
-    </div>
-    <div class="note3-message" hidden>
-        You found another sticky note with a reminder on it!<br><br> 
-        It reads: "Reminder: Delete photos of me and Jordan or tuck them away in a locked folder"<br><br> 
-        Do you think the leaked photo could've been a personal photo between Sam and Jordan? Do you think it's a good idea for Sam to delete them?<br><br><br>
-        <a class="button note3-next">Next</a>
-    </div>
-
-    <!-- message cards -->
-    <div class="cards-message" hidden>
-        Hmm just looks like some blank note cards...<br><br> 
-        These could come in handy for a test!<br><br>
-        Doesn't really look Sam's report though. <br><br> 
-        Pretty interesting idea for a report! Maybe it would be worthwhile to read about Digital Privacy!<br><br><br>
-        <a class="button cards-next">Next</a>
-    </div>
 
     <!-- books message -->
     <div class="books-message" hidden>
         What's this?<br><br> 
         It looks like papers tucked in between the books!<br><br> 
         Hmmm this doesnt look like Sam's report...it looks pretty private...do you still want to read it?<br><br><br>
-        <a class="accept papers-yes">Yes</a>
+        <a class="accept papers-yes" href="part1-clues/part1-book.html">Yes</a>
         <a class="button papers-no">No</a>
     </div>
 
-    <div class="papers-message" hidden>
-        This looks like a letter from Jordan to Sam!<br><br> 
-        It mentions Jordan not being able to get over Sam! And all of their memories together. Looks like they shared a lot together. Do you think the photos Jordan talked about could be the same photos that were leaked of Sam?<br><br> 
-        I wonder how Jordan reacted to all of this!<br><br><br>
-        <a class="button papers-next">Next</a>
-    </div>
-
     <!-- button to finish -->
-    <a class="button finish" hidden>Finish</a>
+    <a href="part1-clueroom_outro.html" class="button finish">Finish</a>
 
     <script src="assets/js/jquery-3.4.1.js"></script>
     <script src="assets/js/clueroom.js"></script>
