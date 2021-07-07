@@ -73,3 +73,23 @@ body {
         opacity: 1; 
     } 
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .jumbotron {
+        top: 37.5%;
+        left: 37.5%; 
+        font-size: 15px;
+        transform: translate(-25%, -25%);
+    }
+
+    .button {
+        border: 0.5px solid #fff;
+        padding: .2em .75em;
+    }
+
+    .finish {
+        bottom: 2.5%;
+        right: 2.5%;
+    }
+}

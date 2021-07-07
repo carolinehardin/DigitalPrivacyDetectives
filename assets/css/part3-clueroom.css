@@ -53,11 +53,12 @@
     background-color: aliceblue;
     font-family: helvetica;
     z-index: +1;
-    height: 60vh;
-    width: 10vw;
+    /*height: 60vh;*/
+    width: 100%;
     border-collapse: collapse;
     border-bottom-left-radius: 1vh;
-    float: left;
+    border: 0.5vh solid white;
+    /*float: left;*/
 }
 
 .email-tab b {
@@ -67,9 +68,8 @@
 .email-tab {
     color: gray;
     text-align: center;
-    border-right: solid white 0.5vh;
-    border-top: solid white 0.5vh;
-    border-bottom-left-radius: 1vh;
+    /*border-top: solid white 0.5vh;
+    border-bottom-left-radius: 1vh;*/
 }
 
 .email-tab:hover {
@@ -85,12 +85,12 @@
 }
 
 .email-text {
-    height: 60vh;
-    width: 40vw;
-    float: right;
+    height: 51vh;
+    /*width: 40vw;
+    float: right;*/
     border-bottom-right-radius: 1vh;
     font-family: helvetica;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .subject {

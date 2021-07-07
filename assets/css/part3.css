@@ -468,3 +468,214 @@
         opacity: 1;
     }
 }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    tw-story {
+        font-size: 1.3em;
+        line-height: 1.3em;
+        background-color: black;
+        height: 100%;
+    }
+
+    /* Computer Frame */
+    .frame{
+        border-top-right-radius: 11.25px;
+        border-top-left-radius: 11.25px;
+        height: 345px;
+        width: 525px;
+        left: 30px;
+    }
+
+    /* Computer Window Screen */
+    .screen{
+        height: 307.5px;
+        bottom: 7.5px;
+        width: 495px;
+    }
+
+    /* Computer Keyboard */
+    .keyboard{
+        border-bottom-left-radius: 11.25px;
+        border-bottom-right-radius: 11.25px;
+        height: 15px;
+        border-top: solid 7.5px darkgray;
+        width: 585px;
+    }
+
+    /* Computer Mouse Widget */
+    .widget{
+        width: 150px;
+        height: 7.5px;
+        bottom: 7.5px;
+        border-bottom-left-radius: 11.25px;
+        border-bottom-right-radius: 11.25px;
+    }
+
+    /* Computer Window Search */
+    .search{
+        height: 30px;
+    }
+
+    /* Computer Screen Bar */
+    .bar{
+        border: solid gray 0.75px;
+        border-radius: 11.25px;
+        font-size: 9px;
+        width: 412.5px;
+        line-height: 16.5px;
+        padding-left: 11.25px;
+        top: 6px;
+    }
+
+    /* Computer Chat Profile */
+    .profile{
+        font-size: 12.75px;
+        left: 9px;
+        bottom: 7.5px;
+        width: 60px;
+    }
+
+    /* Chat Image */
+    .image{
+        width: 60px;
+        height: 60px;
+        border-radius: 37.5px;
+        border: solid white 1.5px; 
+    }
+
+    /* Chat Header */
+    .head{
+        width: 22.5px;
+        height: 22.5px;
+        top: 7.5px;
+        border-radius: 37.5px;
+    }
+
+    /* Chat Body */
+    .body{
+        width: 37.5px;
+        height: 22.5px;
+        top: 11.25px;
+        border-top-right-radius: 37.5%;
+        border-top-left-radius: 37.5%;
+        border-bottom-right-radius: 37.5%;
+        border-bottom-left-radius: 37.5%;
+    }
+
+    /* Chat Main */
+    .main{
+        width: 337.5px;
+        height: 277.5px;
+        padding: 22.5px;
+        bottom: 54px;
+    }
+
+    /* Chat Window */
+    .chat {
+        width: 337.5px;
+        height: 277.5px;
+        line-height: 6px;
+        padding: 7.5px;
+        bottom: 54px;
+    }
+
+    /* Chat Messages */
+    .message {
+        border-radius: 15px;
+        padding: 6px 11.25px;
+        font-size: 11.25px;
+        line-height: 13.125px;
+    }
+
+    /* Chat Your Messages */
+    .yours .message {
+        margin-right: 18.75%;
+    }
+
+    /* Chat Your Messages Before */
+    .yours .message.last:before {
+        left: -5.25px;
+        height: 15px;
+        width: 15px;
+        border-bottom-right-radius: 11.25px;
+    }
+
+    /* Chat Your Messages After */
+    .yours .message.last:after {
+        left: -7.5px;
+        width: 7.5px;
+        height: 15px;
+        border-bottom-right-radius: 7.5px;
+    }
+
+    /* Chat My Messages */
+    .mine .message {
+        margin-left: 18.75%;
+    }
+
+    /* Chat My Messages Before */
+    .mine .message.last:before {
+        right: -6px;
+        height: 15px;
+        width: 15px;
+        border-bottom-left-radius: 11.25px;
+    }
+
+    /* Chat My Messages After */
+    .mine .message.last:after {
+        right: -7.5px;
+        width: 7.5px;
+        height: 15px;
+        border-bottom-left-radius: 7.5px;
+    }
+
+    /* Chat Notify */
+    .notify {
+        height: 45px;
+        border-radius: 11.25px;
+        font-size: 15px;
+        width: 300px;
+    }
+
+    /* Chat Status */
+    .complete {
+        font-size: 12.75px;
+        height: 30px;
+        border-bottom-left-radius: 11.25px;
+        border-bottom-right-radius: 11.25px;
+        width: 300px;
+    }
+
+    /* Chat Options */
+    .button {
+        top: 7.5px;
+        border-radius: 11.25px;
+        font-size: 12px;
+        padding: 3.75px;
+        line-height: 15px;
+        width: 300px;
+    }
+
+    .polaroid {
+        width: 241.5px;
+        height: 240px;
+        left: 502.5px;
+        bottom: 90px;
+        border: solid black 1.5px;
+    }
+
+    .polaroidImage {
+        padding: 37.5 30px; 
+        left: 7.5px; 
+        top: 7.5px;
+        width: 220px; 
+        height: 161.25px;
+    }
+
+    .caption {
+        left: 60px;
+        top: 18.75px;
+        font-size: 22.5px;
+    }
+}

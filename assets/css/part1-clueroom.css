@@ -55,13 +55,6 @@
     left: 20%;
     filter: sepia(30%) blur(0.8px);
 }
-.cards-pressed{
-    position: absolute;
-    top: 25%;
-    left: 3%;
-    height: 60%;
-    z-index: +1;
-}
 
 .note:hover{
     cursor: pointer;
@@ -75,64 +68,91 @@
     cursor: pointer;
 }
 
+/* sticky notes */
 .note-pressed{
-    position: absolute;
+    /*position: absolute;
     top: 20%;
-    left: 10%;
+    left: 10%;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     height: 70%;
     z-index: +1;
+}
+
+.note-writing{
+    position: absolute;
+    top: 15%;
+    left: 37.5%;
+    transform: rotate(-9deg);
+    width: 24%;
+    z-index: +2;
+    color: black;
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
 }
 
 /* note 1 message */
 .note1-message{
     text-align: center;
-    height: 60%;
-    width: 30%;
+    /*height: 60%;
+    width: 30%;*/
     font-size: 17px;
     font-family: 'Courier New', Courier, monospace;
-    position: absolute;
+    /*position: absolute;
     top: 30%;
-    left: 55%;
+    left: 55%;*/
     background: transparent;
     z-index: +1;
 }
 /* note 2 message */
 .note2-message{
     text-align: center;
-    height: 60%;
-    width: 30%;
+    /*height: 60%;
+    width: 30%;*/
     font-size: 17px;
     font-family: 'Courier New', Courier, monospace;
-    position: absolute;
+    /*position: absolute;
     top: 30%;
-    left: 55%;
+    left: 55%;*/
     background: transparent;
     z-index: +1;
 }
 /* note 3 message */
 .note3-message{
     text-align: center;
-    height: 60%;
-    width: 30%;
+    /*height: 60%;
+    width: 30%;*/
     font-size: 17px;
     font-family: 'Courier New', Courier, monospace;
-    position: absolute;
+    /*position: absolute;
     top: 30%;
-    left: 55%;
+    left: 55%;*/
     background: transparent;
     z-index: +1;
 }
 
 /* cards */
+.cards-pressed{
+    /*position: absolute;
+    top: 25%;
+    left: 3%;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60%;
+    z-index: +1;
+}
+
 .cards-message{
     text-align: center;
-    height: 60%;
-    width: 30%;
+    /*height: 60%;
+    width: 30%;*/
     font-size: 17px;
     font-family: 'Courier New', Courier, monospace;
-    position: absolute;
+    /*position: absolute;
     top: 30%;
-    left: 55%;
+    left: 55%;*/
     background: transparent;
     z-index: +1;
 }
@@ -141,7 +161,7 @@
 .books-message{
     background-color: transparent; 
     position: absolute; 
-    top: 50%;
+    top: 37.5%;
     left: 50%; 
     z-index: +1;
     transform: translate(-50%, -50%);
@@ -162,32 +182,87 @@
     cursor: pointer;
 }
 .papers{
-    height: 92%;
-    position: absolute;
+    /*position: absolute;
     top: 5%;
-    left: 10%;
+    left: 10%;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 92%;
     z-index: +1;
 }
 .papers-message{
     text-align: center;
-    height: 40%;
-    width: 30%;
+    /*height: 40%;
+    width: 30%;*/
     font-size: 17px;
     font-family: 'Courier New', Courier, monospace;
-    position: absolute;
-    top: 30%;
-    left: 55%;
+    /*position: absolute;*/
+    /*top: 30%;
+    left: 55%;*/
     background: transparent;
     z-index: +1;
 }
-.note-writing{
-    position: absolute;
-    top: 35%;
-    left: 16%;
-    transform: rotate(-9deg);
-    width: 24%;
-    z-index: +2;
-    color: black;
-    font-family: 'Indie Flower', cursive;
-    font-size: 30px;
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .books-message {
+        font-size: 15px;
+    }
+
+    /* papers */
+    .accept {
+        border: 0.5px solid #fff;
+        padding: .2em 0.75em;
+    }
+
+    .papers-message {
+        font-size: 15px;
+    }
+
+    .paper-window{
+        flex-direction: column;
+    }
+
+    .papers {
+        height: 69%;
+        top: 2.5%;
+        left: 5%;
+    }
+
+    .note-pressed {
+        height: 35%;
+    }
+
+    .note-writing {
+        font-size: 10px;
+        position: absolute;
+        /*top: 15%;
+        left: 37.5%;
+        width: 24%;*/
+    }
+
+    /* note 1 message */
+    .note1-message{
+        font-size: 15px;
+    }
+
+    /* note 2 message */
+    .note2-message{
+        font-size: 15px;
+    }
+
+    /* note 3 message */
+    .note3-message {
+        font-size: 15px;
+    }
+
+    /* cards */
+    .cards-message{
+        font-size: 15px;
+    }
+
+    .cards-pressed{
+        height: 30%;
+    }
 }
