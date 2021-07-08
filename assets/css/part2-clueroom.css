@@ -53,9 +53,12 @@
 
 .report{
     color: black;
-    /*position: absolute;*/
+    /*position: absolute;
+    left: 10%;*/
     top: 10%;
-    left: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     z-index: +1;
 }
 
@@ -94,9 +97,6 @@
     
     .report{
         height: 50%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
     }
     
     .report-message{
