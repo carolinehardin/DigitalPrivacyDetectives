@@ -96,7 +96,7 @@
     </div>
 </tw-passagedata>
 
-<tw-passagedata pid="7" name="accept chat" tags="" position="711,953" size="100,100">
+tw-passagedata pid="7" name="accept chat" tags="" position="711,953" size="100,100">
     <div class="phone"><div class="chat" alt="
     You: Uhhh yeah?
 
@@ -106,7 +106,7 @@
 
     Becky: Come on, you&#39;ve got a FRONT ROW seat to the biggest breakup in school. It&#39;s not like you&#39;re telling a stranger. I&#39;m your best friend.
 
-    " ><div class="widget"></div><div class="w-contain"><div class="ChatApp">ChatApp!</div><div class="name">Becky</div></div>
+    "><div class="widget"></div><div class="w-contain"><div class="ChatApp">ChatApp!</div><div class="name">Becky</div></div>
     <div class="mine messages"><div id="msg1" class="message last">Uhhh yeah?</div></div>
     <div class="yours messages"><div id="msg2" class="message last">How is Jordan? What about Sam? I want ALL the details, plz. =D</div></div>
     <div class="mine messages"><div id="msg3" class="message last">I really dunno much.</div></div>
@@ -116,9 +116,17 @@
 
     You: [[I should probably not say anything else.]]
 
-    You: [[I do know this one thing...]] 
-    </div>
-</tw-passagedata>
+    You: [[Wait Sam left $SamHisHer phone unlocked.... ->I do know this one thing...]] 
+    (if: $SamHeShe is 'she' and $JordanHeShe is 'he')[(set:$codeWord to 'bird')]
+    (else-if: $SamHeShe is 'he' and $JordanHeShe is 'he')[(set:$codeWord to 'grass')]
+    (else-if: $SamHeShe is 'they' and $JordanHeShe is 'he')[(set:$codeWord to 'plum')]
+    (else-if: $SamHeShe is 'she' and $JordanHeShe is 'she')[(set:$codeWord to 'sky')]
+    (else-if: $SamHeShe is 'he' and $JordanHeShe is 'she')[(set:$codeWord to 'park')]
+    (else-if: $SamHeShe is 'they' and $JordanHeShe is 'she')[(set:$codeWord to 'cat')]
+    (else-if: $SamHeShe is 'she' and $JordanHeShe is 'they')[(set:$codeWord to 'leaf')]
+    (else-if: $SamHeShe is 'he' and $JordanHeShe is 'they')[(set:$codeWord to 'song')]
+    (else-if: $SamHeShe is 'they' and $JordanHeShe is 'they')[(set:$codeWord to 'rain')]   
+</div>
 
 <tw-passagedata pid="8" name="SamNeutral" tags="" position="720,623" size="100,100">
     <div class="phone"><div class="chat"><div class="widget"></div><div class="w-contain"><div class="ChatApp">ChatApp!</div><div class="name">Profile</div></div><div class="profile">
@@ -252,9 +260,11 @@
 
 <tw-passagedata pid="16" name="GoToSchool" tags="" position="1097,1386" size="100,100">Great work detective! You are done with this set of digital clues.
 
-    Take a moment to jot down what you know about the characters so you can discover who sent the photo. Who said things that respected privacy? (and who didn&#39;t?)
+    Your codeword is: $codeWord (write this down to use in part 2!)
 
-    You can now explore the &#39;room&#39; until the time is up, or go back through the story again.
+    Take a moment to jot down what you know about the characters so you can discover who sent the photo. Who said things that respected privacy? (and who didn't?)
+
+    You can now explore the 'room' until the time is up, or go back through the story again.
 
     [[Go to start-&gt;Log into Secretz]]
 
