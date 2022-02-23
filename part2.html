@@ -183,15 +183,15 @@
 (set: $codeWord to (prompt: &quot;Enter your code word. (If you don&#39;t have one, enter &#39;none&#39;).&quot;, &quot;&quot;))
 
 
-(if: $codeWord is &#39;Bird&#39; or &#39;bird&#39;)[(set:$SamGender to &#39;f&#39;) (set:$JordanGender to &#39;m&#39;)(goto: "School")]
-    (else-if: $codeWord is &#39;Ocean&#39; or &#39;ocean&#39;)[(set:$SamGender to &#39;m&#39;) (set:$JordanGender to &#39;m&#39;)(goto: "School")]
-    (else-if: $codeWord is &#39;Meerkat&#39; or &#39;meerkat&#39;)[(set:$SamGender to &#39;t&#39;) (set:$JordanGender to &#39;m&#39;)(goto: "School")]
-    (else-if: $codeWord is &#39;Planet&#39; or &#39;planet&#39;)[(set:$SamGender to &#39;f&#39;) (set:$JordanGender to &#39;f&#39;)(goto: "School")]
-    (else-if: $codeWord is &#39;Park&#39; or &#39;park&#39;)[(set:$SamGender to &#39;m&#39;) (set:$JordanGender to &#39;f&#39;)(goto: "School")]
-    (else-if: $codeWord is &#39;Cottage&#39; or &#39;cottage&#39;)[(set:$SamGender to &#39;t&#39;) (set:$JordanGender to &#39;f&#39;)(goto: "School")]
-    (else-if: $codeWord is &#39;Science&#39; or &#39;science&#39;)[(set:$SamGender to &#39;f&#39;) (set:$JordanGender to &#39;t&#39;)(goto: "School")]
-    (else-if: $codeWord is &#39;Song&#39; or &#39;song&#39;)[(set:$SamGender to &#39;m&#39;) (set:$JordanGender to &#39;t&#39;)(goto: "School")]
-    (else-if: $codeWord is &#39;Fish&#39; or &#39;fish&#39; or &#39;None&#39; or &#39;none&#39; )[(set:$SamGender to &#39;t&#39;) (set:$JordanGender to &#39;t&#39;)(goto: "School")]
+(if: $codeWord is 'Bird' or 'bird')[(set:$SamGender to 'f') (set:$JordanGender to 'm')(goto: "School")]
+    (else-if: $codeWord is 'Grass' or 'grass')[(set:$SamGender to 'm') (set:$JordanGender to 'm')(goto: "School")]
+    (else-if: $codeWord is 'Plum' or 'plum')[(set:$SamGender to 't') (set:$JordanGender to 'm')(goto: "School")]
+    (else-if: $codeWord is 'Sky' or 'sky')[(set:$SamGender to 'f') (set:$JordanGender to 'f')(goto: "School")]
+    (else-if: $codeWord is 'Park' or 'park')[(set:$SamGender to 'm') (set:$JordanGender to 'f')(goto: "School")]
+    (else-if: $codeWord is 'Cat' or 'cat')[(set:$SamGender to 't') (set:$JordanGender to 'f')(goto: "School")]
+    (else-if: $codeWord is 'Leaf' or 'leaf')[(set:$SamGender to 'f') (set:$JordanGender to 't')(goto: "School")]
+    (else-if: $codeWord is 'Song' or 'song')[(set:$SamGender to 'm') (set:$JordanGender to 't')(goto: "School")]
+    (else-if: $codeWord is 'Rain' or 'rain' or 'None' or 'none' )[(set:$SamGender to 't') (set:$JordanGender to 't')(goto: "School")]
     
     (else:)[
     Oops! I didn&#39;t quite catch that.
