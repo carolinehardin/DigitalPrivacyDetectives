@@ -117,6 +117,16 @@
     You: [[I should probably not say anything else.]]
 
     You: [[I do know this one thing...]] 
+        
+        (if: $SamHeShe is 'she' and $JordanHeShe is 'he')[(set:$codeWord to 'bird')]
+(else-if: $SamHeShe is 'he' and $JordanHeShe is 'he')[(set:$codeWord to 'grass')]
+(else-if: $SamHeShe is 'they' and $JordanHeShe is 'he')[(set:$codeWord to 'plum')]
+(else-if: $SamHeShe is 'she' and $JordanHeShe is 'she')[(set:$codeWord to 'sky')]
+(else-if: $SamHeShe is 'he' and $JordanHeShe is 'she')[(set:$codeWord to 'park')]
+(else-if: $SamHeShe is 'they' and $JordanHeShe is 'she')[(set:$codeWord to 'cat')]
+(else-if: $SamHeShe is 'she' and $JordanHeShe is 'they')[(set:$codeWord to 'leaf')]
+(else-if: $SamHeShe is 'he' and $JordanHeShe is 'they')[(set:$codeWord to 'song')]
+(else: $SamHeShe is 'they' and $JordanHeShe is 'they')[(set:$codeWord to 'rain')]
     </div>
 </tw-passagedata>
 
