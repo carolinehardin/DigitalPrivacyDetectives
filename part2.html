@@ -180,22 +180,22 @@
 
 <tw-passagedata pid="13" name="Input" tags="margins" position="56,535" size="100,100">
 
-(set: $codeWord to (prompt: &quot;Enter your code word. (If you don&#39;t have one, enter &#39;none&#39;).&quot;, &quot;&quot;))
+    (set: $codeWord to (prompt: &quot;Enter your code word. (If you don&#39;t have one, enter &#39;none&#39;).&quot;, &quot;&quot;))
 
 
-(if: $codeWord is 'Bird' or 'bird')[(set:$SamGender to 'f') (set:$JordanGender to 'm')(goto: "School")]
-    (else-if: $codeWord is 'Grass' or 'grass')[(set:$SamGender to 'm') (set:$JordanGender to 'm')(goto: "School")]
-    (else-if: $codeWord is 'Plum' or 'plum')[(set:$SamGender to 't') (set:$JordanGender to 'm')(goto: "School")]
-    (else-if: $codeWord is 'Sky' or 'sky')[(set:$SamGender to 'f') (set:$JordanGender to 'f')(goto: "School")]
-    (else-if: $codeWord is 'Park' or 'park')[(set:$SamGender to 'm') (set:$JordanGender to 'f')(goto: "School")]
-    (else-if: $codeWord is 'Cat' or 'cat')[(set:$SamGender to 't') (set:$JordanGender to 'f')(goto: "School")]
-    (else-if: $codeWord is 'Leaf' or 'leaf')[(set:$SamGender to 'f') (set:$JordanGender to 't')(goto: "School")]
-    (else-if: $codeWord is 'Song' or 'song')[(set:$SamGender to 'm') (set:$JordanGender to 't')(goto: "School")]
-    (else-if: $codeWord is 'Rain' or 'rain' or 'None' or 'none' )[(set:$SamGender to 't') (set:$JordanGender to 't')(goto: "School")]
-    
+    (if: $codeWord is &#39;Bird&#39; or &#39;bird&#39;)[(set:$SamGender to &#39;f&#39;) (set:$JordanGender to &#39;m&#39;)]   
+   (else-if: $codeWord is &#39;Grass&#39; or &#39;grass&#39;)[(set:$SamGender to &#39;m&#39;) (set:$JordanGender to &#39;m&#39;)]    
+    (else-if: $codeWord is &#39;Plum&#39; or &#39;plum&#39;)[(set:$SamGender to &#39;t&#39;) (set:$JordanGender to &#39;m&#39;)]    
+    (else-if: $codeWord is &#39;Sky&#39; or &#39;sky&#39;)[(set:$SamGender to &#39;f&#39;) (set:$JordanGender to &#39;f&#39;)]    
+    (else-if: $codeWord is &#39;Park&#39; or &#39;park&#39;)[(set:$SamGender to &#39;m&#39;) (set:$JordanGender to &#39;f&#39;)]    
+    (else-if: $codeWord is &#39;Cat&#39; or &#39;cat&#39;)[(set:$SamGender to &#39;t&#39;) (set:$JordanGender to &#39;f&#39;)]    
+    (else-if: $codeWord is &#39;Leaf&#39; or &#39;leaf&#39;)[(set:$SamGender to &#39;f&#39;) (set:$JordanGender to &#39;t&#39;)]   
+    (else-if: $codeWord is &#39;Song&#39; or &#39;song&#39;)[(set:$SamGender to &#39;m&#39;) (set:$JordanGender to &#39;t&#39;)]   
+    (else-if: $codeWord is &#39;Rain&#39; or &#39;rain&#39; or &#39;None&#39; or &#39;none&#39; )[(set:$SamGender to &#39;t&#39;) (set:$JordanGender to &#39;t&#39;)]
     (else:)[
-    Oops! I didn&#39;t quite catch that.
-    (live: 2s)[(goto: &quot;Input&quot;)]]
+    (alert: "Oops! I didn&#39;t quite catch that.")
+    [(goto: &quot;Input&quot;)]]
+    
     
     (if: $SamGender is &#39;m&#39;)[(set: $SamHeShe to &#39;he&#39;)(set: $SamHisHers to &#39;his&#39;)(set: $SamHimHer to &#39;him&#39;)(set: $SamHisHer to &#39;his&#39;)(set: $SamHeSheCaps to &#39;He&#39;)(set: $SamHisHersCaps to &#39;His&#39;)(set: $SamHimHerCaps to &#39;Him&#39;)(set: $SamHisHerCaps to &#39;His&#39;)]
     
@@ -211,6 +211,12 @@
 
 
 
+    (set: $goodWordsArray to (a: 'bird', 'Bird', 'grass', 'Grass', 'plum', 'Plum',
+    'sky', 'Sky','park', 'Park','cat', 'Cat','leaf', 'Leaf',
+    'song', 'Song','rain', 'Rain', 'none', 'None'))
+
+    (if: $goodWordsArray contains $codeWord)
+    [(goto: &quot;School&quot;)]
 
 </tw-passagedata>
 
