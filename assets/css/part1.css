@@ -16,8 +16,9 @@
 }
 
 .caption {
-    left: 90px;
-    top: 25px;
+    text-align: center;
+    /* left: 90px; */
+    top: 10px;
     font-family: 'Permanent Marker', cursive;
     font-size: 30px;
 }
