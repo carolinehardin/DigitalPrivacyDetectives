@@ -54,7 +54,7 @@
         </div></div><div class="line"></div></div>
         (set: $SamHeShe to 'she')(set: $SamHisHer to 'her')(set: $SamHisHers to 'hers')(set: $SamHimHer to 'her')(set: $SamHeSheCaps to 'She')(set: $SamHisHerCaps to 'Her')(set: $SamHisHersCaps to 'Hers')(set: $SamHimHerCaps to 'Her')
         <div class="options">
-        <img src="./Part 1_ The Sleepover_files/oneglass.jpg" width="300" height="80" alt="Magnifying Glass" class="oneglassImage">
+        <img src="images/oneglass.jpg" width="300" height="80" alt="Magnifying Glass" class="oneglassImage">
         Yesterday **Sam** changed $SamHisHer relationship status with **Jordan** to ** we broke up**!
         </div>
     </tw-passagedata>
@@ -69,7 +69,7 @@
         </div></div><div class="line"></div></div>
         (set: $SamHeShe to 'they')(set: $SamHisHers to 'theirs')(set: $SamHimHer to 'them')(set: $SamHisHer to 'their')(set: $SamHeSheCaps to 'They')(set: $SamHisHersCaps to 'Theirs')(set: $SamHimHerCaps to 'Them')(set: $SamHisHerCaps to 'Their')
         <div class="options">
-        <img src="./Part 1_ The Sleepover_files/oneglass.jpg" width="300" height="80" alt="Magnifying Glass" class="oneglassImage">
+        <img src="images/oneglass.jpg" width="300" height="80" alt="Magnifying Glass" class="oneglassImage">
         Yesterday **Sam** changed $SamHisHer relationship status with **Jordan** to ** we broke up**!
         </div>
     </tw-passagedata>
@@ -161,11 +161,11 @@
         <div class="yours messages"><div id="msg3" class="message last">That's right, you had a sleepover last night. That means you probably heard the ENTIRE breakup! I. am. so. jealous.</div></div>
         <div class="mine messages"><div id="msg4" class="message last">I really didn't hear anything I can share</div></div>
         <div class="yours messages"><div id="msg5" class="message last">I still can't believe they broke up...you just know someone is going to have their eye on Jordan. It's only a matter of time.</div></div>
-        <div class="mine messages"><div id="msg6" class="message last">What does that mean?</div></div></div><div class="line"></div><div class="m-box">iMessage</div></div>
+        </div><div class="line"></div><div class="m-box">iMessage</div></div>
         <div class="options">
-            You: [[You'll have to ask Sam if you want details->But I can't say anything more]]
+            You: [[Look, you'll have to ask Sam if you want details->But I can't say anything more]]
             <!-- if player chooses this option it can unlock option in pt 2 look for 🌼-->
-            You:  (link: "Yeah, do you know if jordan is already talking to someone?")
+            You:  (link: "Why, do you know if Jordan is already talking to someone?")
             [(set: $beckySlap to "")(goto: "Yeah, do you know if jordan is already talking to someone?")]
         </div>
     </tw-passagedata>
@@ -195,7 +195,7 @@
 
     <tw-passagedata pid="11" name="But I can&#39;t say anything more" tags="" position="939,1220" size="100,100"> 
         <div class="phone"><div class="chat" alt="Becky: But everyone is talking bout it. How is Sam, anyway?"><div class="widget"></div><div class="w-contain"><div class="ChatApp">ChatApp!</div><div class="name">Becky</div></div>
-        <div class="mine messages"><div id="msg1" class="message last">But I can't say anything more</div></div>
+        <div class="mine messages"><div id="msg1" class="message last">Look, you'll have to ask Sam if you want details</div></div>
         <div class="yours messages"><div id="msg2" class="message last">But everyone is talking about it. How is Sam anyway?</div></div></div><div class="line"></div><div class="m-box">iMessage</div></div>
         <div class="options">
         You: (link: "Sam is pretty broken up about it.")[(set: $privacyScore to it +1)(goto: "Sleepover status")]
@@ -294,7 +294,7 @@ You get a ride to school with Sam, but $SamHeShe $is really quiet. Is it because
 <tw-passagedata pid="18" name="Yeah, do you know if jordan is already talking to someone?" tags="" position="372,1326" size="100,100">
     <div class="phone"><div class="chat" alt="Yeah, do you know if jordan is already talking to someone?
     Becky: I can try to figure that out if you tell me about Sam   You:"><div class="widget"></div><div class="w-contain"><div class="ChatApp">ChatApp!</div><div class="name">Becky</div></div>
-    <div class="mine messages"><div id="msg1" class="message last">Yeah, do you know if Jordan is already talking to someone?</div></div>
+    <div class="mine messages"><div id="msg1" class="message last">Why, do you know if Jordan is already talking to someone?</div></div>
     <div class="yours messages"><div id="msg2" class="message last">I'm not sure, just because I'm Jordan's #1 best friend doesn't mean I know everything. Besides, Sam doesn't deserve Jordan anyway.</div></div></div><div class="line"></div><div class="m-box">iMessage</div></div>
     <div class="options">
       <!-- if player chooses this option it can unlock option in pt 2 look for 🌼-->

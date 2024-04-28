@@ -41,8 +41,17 @@
     (else-if: $JordanGender is &#39;t&#39;)[(set: $JordanHeShe to &#39;they&#39;)(set:$JordanHimHer to &#39;them&#39;)(set:$JordanHisHers to &#39;theirs&#39;)(set:$JordanHisHer to &#39;their&#39;)(set: $JordanHeSheCaps to &#39;They&#39;)(set:$JordanHimHerCaps to &#39;Them&#39;)(set:$JordanHisHersCaps to &#39;Theirs&#39;)(set:$JordanHisHerCaps to &#39;Their&#39;)]
 
 (set: $samQuest to 0)
+(set: $samMessage to &#39;Talk to Sam&#39;)
 (set: $susanaQuest to 0)
+(set: $susanaMessage to &#39;Talk to Susana&#39;)
 (set: $jordanQuest to 0)
+(set: $jordanMessage to &#39;Talk to Jordan&#39;)
+(set: $akachi to &#39;Akachi&#39;)
+(set: $yishai to &#39;Yishai&#39;)
+(set: $becky to &#39;Becky&#39;)
+(set: $lochan to &#39;Lochan&#39;)
+(set: $susana to &#39;Susana&#39;)
+(set: $jordan to &#39;Jordan&#39;)
 
     (set: $goodWordsArray to (a: &#39;bird&#39;, &#39;Bird&#39;, &#39;grass&#39;, &#39;Grass&#39;, &#39;plum&#39;, &#39;Plum&#39;,
     &#39;sky&#39;, &#39;Sky&#39;,&#39;park&#39;, &#39;Park&#39;,&#39;cat&#39;, &#39;Cat&#39;,&#39;leaf&#39;, &#39;Leaf&#39;,
@@ -50,15 +59,14 @@
 
     (if: $goodWordsArray contains $codeWord)
     [(goto: &quot;WelcomeToStudyHall&quot;)]
+   
+       </tw-passagedata><tw-passagedata pid="2" name="WelcomeToStudyHall" tags="" position="1500,325" size="100,100">As the bell rings you walk into study hall and see many of your classmates chatting and goofing off.  You&#39;re all caught up on homework which gives you time to chat with your peers. 
 
+Sam is sitting in the corner of the room working on homework. [[$samMessage-&gt;AreYouOkSam]] 
 
-</tw-passagedata><tw-passagedata pid="2" name="WelcomeToStudyHall" tags="" position="1500,325" size="100,100">As the bell rings you walk into study hall and see many of your classmates chatting and goofing off.  You&#39;re all caught up on homework which gives you time to chat with your peers. 
+Susana is making Oragami Cranes with the leftover scraps from her art project. [[$susanaMessage-&gt;TalkToSusana]] 
 
-Sam is sitting in the corner of the room working on homework. [[Talk to Sam-&gt;AreYouOkSam]] 
-
-Susana is making Oragami Cranes with the leftover scraps from her art project. [[Talk to Susana-&gt;TalkToSusana]] 
-
-Jordan is doodling on $JordanHisHer homework. [[Talk to Jordan-&gt;WhoIsToBlame]] 
+Jordan is doodling on $JordanHisHer homework. [[$jordanMessage-&gt;WhoIsToBlame]] 
 
 (if: $samQuest is 1 and $susanaQuest is 1 and $jordanQuest is 1)
 [[[Go to the food court-&gt;GoToFoodCourt]]]
@@ -74,7 +82,8 @@ You: [[What do you need right now?-&gt;ThatsAlsoSmart]]
             
 You: [[I bet it was Akachi Cho! Revenge for the brutal way you shut down being asked out? -&gt;AkachiBlame]]
 
-(set: $samQuest to 1)</tw-passagedata><tw-passagedata pid="4" name="TalkToSusana" tags="" position="1550,525" size="100,100">You: Hey Susana!
+(set: $samQuest to 1)
+(set: $samMessage to &#39;Talk to Sam (already spoken to)&#39;)</tw-passagedata><tw-passagedata pid="4" name="TalkToSusana" tags="" position="1550,525" size="100,100">You: Hey Susana!
 
 Susana: Hey Cheeseball! What&#39;s up! (Susana calls you Cheeseball after you ate a whole gallon of Cheeseballs for lunch on day)
 
@@ -86,7 +95,8 @@ You: sure why not?
 
 [[Go to the vending machines-&gt;GoToVendingMachines]]
 
-(set: $susanaQuest to 1)</tw-passagedata><tw-passagedata pid="5" name="WhoIsToBlame" tags="" position="1850,450" size="100,100">You: Hey Jordan what&#39;s up?
+(set: $susanaQuest to 1)
+(set: $susanaMessage to &#39;Talk to Susana (already spoken to)&#39;)</tw-passagedata><tw-passagedata pid="5" name="WhoIsToBlame" tags="" position="1850,450" size="100,100">You: Hey Jordan what&#39;s up?
 
 Jordan: I can&#39;t believe Sam is back in school! $SamHeShe should just be homeschooled at this point.
 
@@ -96,13 +106,14 @@ Jordan: Yeah it is. Sam let someone take the photo.
 
 You: Uh, it was taken without Sam even KNOWING. Way to blame the victim.
 
-Jordan: Well I stopped caring about $SamHimHer after $SamHeShe] dumped me! Buttttt  I bet I know who sent it. I can see Yishai&#39;s screen from here and he&#39;s using one of those anonymous email services. 
+Jordan: Well I stopped caring about $SamHimHer after $SamHeShe dumped me! Buttttt  I bet I know who sent it. I can see Yishai&#39;s screen from here and he&#39;s using one of those anonymous email services. 
             
 You: [[Why were you snooping on Yishai? That&#39;s a crappy thing to do.-&gt;Blame2]]
 
 You: [[You didn&#39;t see him type his password did you? We could open up the program and look for evidence!-&gt;Blame3]]
 
-(set: $jordanQuest to 1)</tw-passagedata><tw-passagedata pid="6" name="ThatsAlsoSmart" tags="" position="1200,675" size="100,100">Sam: I don&#39;t know..  I&#39;m trying to do all this stuff now to prevent it from happening again. I put a sticker on my webcam and I reset all my passwords. I also am using 2 factor authentification on all my accounts.
+(set: $jordanQuest to 1)
+(set: $jordanMessage to &#39;Talk to Jordan (already spoken to)&#39;)</tw-passagedata><tw-passagedata pid="6" name="ThatsAlsoSmart" tags="" position="1200,675" size="100,100">Sam: I don&#39;t know..  I&#39;m trying to do all this stuff now to prevent it from happening again. I put a sticker on my webcam and I reset all my passwords. I also am using 2 factor authentification on all my accounts.
 
 You: That&#39;s smart.
 
@@ -125,14 +136,14 @@ You: Yeah, you&#39;re right. I should have a conversation with Akachi and some o
 
 [[Talk to some of your classmates -&gt;Suspects]]</tw-passagedata><tw-passagedata pid="8" name="Suspects" tags="" position="1275,800" size="100,100">You look around the room, you see some familiar faces who could provide useful information. Who do you interrogate?
 
-[[Akachi]]
-[[Yishai]]
-[[Becky]]
-[[Lochan]]
-[[Susana]]
-[[Jordan]]
+[[$akachi-&gt;Akachi]]
+[[$yishai-&gt;Yishai]]
+[[$becky-&gt;Becky]]
+[[$lochan-&gt;Lochan]]
+[[$susana-&gt;Susana]]
+[[$jordan-&gt;Jordan]]
 
-[[I am done interrogating for now-&gt;WelcomeToStudyHall]]</tw-passagedata><tw-passagedata pid="9" name="Akachi" tags="" position="962.5,950" size="100,100">You see Akachi sitting in a corner of the study hall, and decide to approach.
+[[I am done interrogating for now-&gt;WelcomeToStudyHall]]</tw-passagedata><tw-passagedata pid="9" name="Akachi" tags="" position="950,950" size="100,100">You see Akachi sitting in a corner of the study hall, and decide to approach.
 
 You: &quot;Hey Akachi, do you know anything about who might have released Sam&#39;s photo?&quot;
 
@@ -140,7 +151,8 @@ Akachi: &quot;Why are you asking me this? Is that because Sam said no to me aski
 
 Akachi seems nervous, but you decide to move on with your investigation.
 
-[(link:  &quot;Continue the interrogations&quot;)[(goto: &quot;Suspects&quot;)]]</tw-passagedata><tw-passagedata pid="10" name="Yishai" tags="" position="1087.5,950" size="100,100">You spot Yishai and decide to ask him a few questions. He is the new kid after all, and no pictures were ever leaked before he got here.
+[(link:  &quot;Continue the interrogations&quot;)[(goto: &quot;Suspects&quot;)]]
+(set: $akachi to &#39;Akachi (already interrogated)&#39;)</tw-passagedata><tw-passagedata pid="10" name="Yishai" tags="" position="1087.5,950" size="100,100">You spot Yishai and decide to ask him a few questions. He is the new kid after all, and no pictures were ever leaked before he got here.
 
 You: &quot;Yishai, do you have a second to talk?&quot;
 
@@ -150,7 +162,8 @@ You: &quot;Have you heard about Sam&#39;s photo getting leaked, and do you have 
 
 Yishai: &quot;Yes of course, I i actually saw it uh, accidentally. That&#39;s pretty crazy! But no, I don&#39;t even know Sam. Matter of fact, I don&#39;t even know anyone here!&quot;
 
-[(link:  &quot;Continue the interrogations&quot;)[(goto: &quot;Suspects&quot;)]]</tw-passagedata><tw-passagedata pid="11" name="Becky" tags="" position="1212.5,950" size="100,100">Becky is standing by the white board, and you decide to go over and ask her about the Sam situation. After all, she knows a lot of people.
+[(link:  &quot;Continue the interrogations&quot;)[(goto: &quot;Suspects&quot;)]]
+(set: $yishai to &#39;Yishai (already interrogated)&#39;)</tw-passagedata><tw-passagedata pid="11" name="Becky" tags="" position="1212.5,950" size="100,100">Becky is standing by the white board, and you decide to go over and ask her about the Sam situation. After all, she knows a lot of people.
 &lt;!-- if you shoved becky:--&gt;&lt;!--Becky: &quot;Oh my god get away from me, shouldn&#39;t you be expelled or something?!&quot; Becky runs out of the room.--&gt;&lt;!-- if you didn&#39;t shove becky:--&gt;
 You: &quot;Becky, have you heard anything about Sam?&quot;
 
@@ -158,15 +171,17 @@ Becky: &quot;No but do you know where Jordan is? I haven&#39;t seen $JordanHimHe
 
 Becky is clearly not going to be helpful here.
 
-[(link:  &quot;Continue the interrogations&quot;)[(goto: &quot;Suspects&quot;)]]</tw-passagedata><tw-passagedata pid="12" name="Lochan" tags="" position="1350,950" size="100,100">You decide to confront Lochan, who you are already suspicious of, given that he was laughing about the photo with Becky.
+[(link:  &quot;Continue the interrogations&quot;)[(goto: &quot;Suspects&quot;)]]
+(set: $becky to &#39;Becky (already interrogated)&#39;)</tw-passagedata><tw-passagedata pid="12" name="Lochan" tags="" position="1350,950" size="100,100">You decide to confront Lochan, who you are already suspicious of, given that he was laughing about the photo with Becky.
 
 You: &quot;Lochan, you were laughing about Sam&#39;s photo so much, people are starting to wonder if you were the one who leaked it.&quot;
 
-Lochan: &quot;Who, me?? Of course not. I don&#39;t care enough about that kid to leak $SamHisHer photo, I heard Sam used the same password for everything, no wonder $SamHeHer got hacked!&quot;
+Lochan: &quot;Who, me?? Of course not. I don&#39;t care enough about that kid to leak $SamHisHer photo, I heard Sam used the same password for everything, no wonder $SamHeShe got hacked!&quot;
 
 You: &quot;Not everyone is an expert in digital privacy, I&#39;m sure even you could be doing  better protect yourself and your privacy.&quot;
 
-[(link:  &quot;Continue the interrogations&quot;)[(goto: &quot;Suspects&quot;)]]</tw-passagedata><tw-passagedata pid="13" name="Susana" tags="" position="1462.5,950" size="100,100">You go sit down next to Susana, after all she has been your childhood friend.
+[(link:  &quot;Continue the interrogations&quot;)[(goto: &quot;Suspects&quot;)]]
+(set: $lochan to &#39;Lochan (already interrogated)&#39;)</tw-passagedata><tw-passagedata pid="13" name="Susana" tags="" position="1462.5,950" size="100,100">You go sit down next to Susana, after all she has been your childhood friend.
 
 You: Hey Susana, do you know anything about the photo being leaked?
 
@@ -176,7 +191,8 @@ You: Yeah, it&#39;s weird though. Everyone is acting so strange as if they all h
 
 Susana: Well i&#39;ll keep my ears open if I hear anything. Good luck on your search!
 
-[(link:  &quot;Continue the interrogations&quot;)[(goto: &quot;Suspects&quot;)]]</tw-passagedata><tw-passagedata pid="14" name="Jordan" tags="" position="1587.5,950" size="100,100">You feel like you have to speak to Jordan. After all, the photo was sent shortly after Sam dumped $JordanHeHer
+[(link:  &quot;Continue the interrogations&quot;)[(goto: &quot;Suspects&quot;)]]
+(set: $susana to &#39;Susana (already interrogated)&#39;)</tw-passagedata><tw-passagedata pid="14" name="Jordan" tags="" position="1587.5,950" size="100,100">You feel like you have to speak to Jordan. After all, the photo was sent shortly after Sam dumped $JordanHimHer
 
 You: &quot;Hey Jordan, how are you doing with the whole breakup thing?&quot;
 
@@ -188,7 +204,8 @@ This seems to have angered Jordan.
 
 Jordan: &quot;What? Is this why you&#39;re talking to me? I can&#39;t believe you would think I am capable of this!&quot;
 
-[(link:  &quot;Continue the interrogations&quot;)[(goto: &quot;Suspects&quot;)]]</tw-passagedata><tw-passagedata pid="15" name="GoToVendingMachines" tags="" position="1625,675" size="100,100">You and Susana walk down the hall to the vending machines when Susana points out something strange.
+[(link:  &quot;Continue the interrogations&quot;)[(goto: &quot;Suspects&quot;)]]
+(set: $jordan to &#39;Jordan (already interrogated)&#39;)</tw-passagedata><tw-passagedata pid="15" name="GoToVendingMachines" tags="" position="1625,675" size="100,100">You and Susana walk down the hall to the vending machines when Susana points out something strange.
 
 Susana: That&#39;s weird, I walked down this hall earlier and this writing on the wall wasn&#39;t here before. 
 
