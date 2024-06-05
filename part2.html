@@ -58,10 +58,9 @@
 <tw-passagedata pid="2" name="School" tags="" position="700,175" size="100,100">
     <img style="padding: 50 40px; float: right;" src="images/pt2.jpg" width ="300" height="215" alt="School Hallway">
 
-	Part 2: The Hallway &lt;!-- 🐤[insert polaroid photo] --&gt;
-    (set: $runs to &quot;runs&quot;)
-    (if: $SamGender is &#39;t&#39;)[(set: $runs to &quot;run&quot;)]
-	You and Sam make it to School when all of a sudden $SamHeShe $runs off crying.
+	Part 2: The Hallway 
+    (set: $runs to &quot;runs&quot;)(if: $SamGender is &#39;t&#39;)[(set: $runs to &quot;run&quot;)]
+	You and Sam make it to school when all of a sudden $SamHeShe $runs off crying.
 
 	You&#39;re worried. It&#39;s not like $SamHimHer to miss school. Sam has always had straight A&#39;s.
 
@@ -97,7 +96,7 @@ You summon your courage, and say: &quot;Hey! We don&#39;t know how that picture 
 
     Everyone starts to look ashamed, until Lochan says, &quot;If you use the internet, don&#39;t expect privacy. Duh.&quot; He rolls his eyes.
 
-    You respond: &quot;That&#39;s crap. That&#39;s like saying....if you want privacy, don&#39;t use a phone. Or a camera. We can help protect each other's privacy on the internet.&quot;
+    You respond: &quot;That&#39;s like saying....if you want privacy, don&#39;t use a phone. Or a camera. We can help protect each other's privacy on the internet.&quot;
 
     [[Becky and Lochan start snickering again...]]
 </tw-passagedata><tw-passagedata pid="6" name="Privacy2" tags="" position="1100,225" size="100,100">
@@ -112,15 +111,15 @@ You summon your courage, and say: &quot;Hey! We don&#39;t know how that picture 
 
 </tw-passagedata><tw-passagedata pid="7" name="Becky and Lochan start snickering again..." tags="" position="1500,700" size="100,100">
     
-    The other kids start to laugh too...
+The other kids start to laugh too...
 
-    [[&quot;How would YOU like to have photos shown all over school?&quot; You threaten to blackmail Lochan and Becky. After all, you&#39;ve known them for years and have a couple photos that are embarassing to show!]]
+[[&quot;How would YOU like to have photos shown all over school?&quot; You threaten to blackmail Lochan and Becky. After all, you&#39;ve known them for years and have a couple photos that are embarassing to show!]]
 
-    [[&quot;Hey, stop it. That&#39;s not funny.&quot;]]
+[[&quot;Hey, stop it. That&#39;s not funny.&quot;]]
 
-    [[You go to the principal&#39;s office and let them know what&#39;s happening. &quot;Everyone is bullying my friend about this embarassing photo. I think you might need to talk to them about how they&#39;ve been acting.&quot;]]
-&lt;!--🌼--&gt;
-[[Accuse Becky of leaking the photo because she likes Jordan]]
+[[You go to the principal&#39;s office and let them know what&#39;s happening. &quot;Everyone is bullying my friend about this embarassing photo. I think you might need to talk to them about how they&#39;ve been acting.&quot;]]
+
+(if: $beckyShove is "shove") [(link:  "Accuse Becky of leaking the photo because she likes Jordan" )[(goto: "Accuse Becky of leaking the photo because she likes Jordan")]]
 </tw-passagedata><tw-passagedata pid="8" name="Go to Study Hall" tags="" position="1100,375" size="100,100">
     
     As you walk to Study Hall, you think about how you keep your own info safe online.
@@ -151,18 +150,18 @@ You summon your courage, and say: &quot;Hey! We don&#39;t know how that picture 
     [[Go to Study Hall]] 
 </tw-passagedata><tw-passagedata pid="11" name="You go to the principal&#39;s office and let them know what&#39;s happening. &quot;Everyone is bullying my friend about this embarassing photo. I think you might need to talk to them about how they&#39;ve been acting.&quot;" tags="" position="1325,550" size="100,100">
 
-The principal tells you they got a call earlier that morning from Sam&#39;s parents about the photo. They ask you to support Sam and let a teacher know if you hear anything else.
+The principal tells you that he got a call earlier that morning from Sam&#39;s parents about the photo. He asks you to support Sam and let a teacher know if you hear anything else.
 
-    It&#39;s possible that whoever sent the photo to everyone could be in serious trouble... They could get suspsended, or worse.
+It&#39;s possible that whoever sent the photo to everyone could be in serious trouble... They could get suspsended, or worse.
 
-    (set: $privacyScore to it +2)
+[[Go to Study Hall]] 
 
-    [[Go to Study Hall]] 
+(set: $privacyScore to it +2)
 </tw-passagedata><tw-passagedata pid="12" name="Better safe than sorry!" tags="" position="1450,375" size="100,100">
     
     Awesome sauce! You are done with this set of digital clues. You&#39;re starting to figure it out...
 
-    You can now explore the &#39;room&#39; until the time is up, or go back through the story again.
+    You can now take on the Bonus Adventure until the time is up, or go back through the story again.
     (set: $code to $codeArr&#39;s 1st)
     Your codeword is: $code (write this down to use in part 3!)
 
@@ -172,11 +171,10 @@ The principal tells you they got a call earlier that morning from Sam&#39;s pare
 </tw-passagedata><tw-passagedata pid="13" name="You start to panic" tags="" position="1275,925" size="100,100">
     
 Becky: Why can&#39;t you just take a joke? It&#39;s not like Sam is being affected by it.
-(if: $beckyShove is &quot;shove&quot;)
-[You get angry at Becky, do you,]
+(if: $beckyShove is &quot;shove&quot;) [You get angry at Becky, do you,]
 
-(if: $beckyShove is &quot;shove&quot;)
-[(link:  &quot;Shove Becky into a locker&quot; )[(set: $beckyGotShoved to &#39;true&#39;)(goto: &quot;Shove Becky into a locker&quot;)]]
+(if: $beckyShove is &quot;shove&quot;) [(link:  &quot;Shove Becky into a locker&quot; )[(set: $beckyGotShoved to &#39;true&#39;)(goto: &quot;Shove Becky into a locker&quot;)]]
+(else:)[You get angry at Becky, but decide to let it go.]
 
     [[Go to Study Hall]] 
 
@@ -194,7 +192,7 @@ Becky: Why can&#39;t you just take a joke? It&#39;s not like Sam is being affect
     [[Chase after Sam]] 
 </tw-passagedata><tw-passagedata pid="15" name="Chase after Sam" tags="" position="850,850" size="100,100">
 
-Sam wait! 
+You: "Sam wait!" 
 
 (if: $SamGender is &#39;t&#39;)[You call desperately, they turn to you.](else:)[You call desperately, $SamHeShe turns to you]
 
@@ -221,14 +219,15 @@ Sam: &quot;Well it&#39;s not a joke to me. Now whenever someone looks at me they
 
 You: &quot;I&#39;m sorry Sam you&#39;re right it&#39;s not funny. We&#39;ll find out who did this so you can go back to a normal life.&quot;
 
-[[Go to Study Hall]] </tw-passagedata><tw-passagedata pid="18" name="Tell Sam that they are overreacting" tags="" position="1000,1025" size="100,100"><!--🐤if this option is picked sam loses your trust, the only way to get it back is to figure out who sent the photos unlocks option in pt 3 or 4 not sure yet look for🦋 -->
+[[Go to Study Hall]] </tw-passagedata><tw-passagedata pid="18" name="Tell Sam that they are overreacting" tags="" position="1000,1025" size="100,100">
 You: &quot;Chill out, it was just a joke. Why are you so sensitive about it? You need to learn to take things less seriously.&quot;
 
 Sam: &quot;Well it&#39;s not your reputation on the line so who are you to tell me I&#39;M being sensitive. are you even really my friend?&quot;
 
 Sam runs off again before you can answer.
 
-[[Go to Study Hall]] </tw-passagedata><tw-passagedata pid="19" name="Shove Becky into a locker" tags="" position="1100,850" size="100,100">&lt;!--🐤--&gt;
+[[Go to Study Hall]] </tw-passagedata><tw-passagedata pid="19" name="Shove Becky into a locker" tags="" position="1100,850" size="100,100">
+
 You push Becky as hard as you can into a locker.
 
 You: &quot;You don&#39;t know how Sam is feeling, you only care about yourself and your ego.&quot;
@@ -237,12 +236,12 @@ Becky is shaken up and quickly leaves the scene.
 
 The Principal sees you shove Becky into a locker and calls you into his office.
 
-[(link:  &quot;You go to the principal&#39;s office and let them know what&#39;s happening. \&quot;Everyone is bullying my friend about this embarassing photo. I think you might need to talk to them about how they&#39;ve been acting.\&quot;&quot;)[(goto: &quot;PrincipalShove&quot;)]]
+[(link:  "Go to the Principal's office")[(goto: "PrincipalShove")]]
 </tw-passagedata><tw-passagedata pid="20" name="Accuse Becky of leaking the photo because she likes Jordan" tags="" position="1350,800" size="100,100">
 
 You: &quot;Becky probably sent the photo around the school.&quot;
 
-Becky: &quot;and why would I do that?&quot;
+Becky: &quot;And why would I do that?&quot;
 
 You: &quot;You&#39;ve been eyeing Jordan way before Sam and $JordanHimHer got together. I wouldn&#39;t put it past you to leak a photo just to be with Jordan.
 
@@ -254,11 +253,13 @@ Becky: &quot;Whatever. It&#39;s not like Jordan would&#39;ve stayed with $SamHim
 (if: $beckyShove is &quot;shove&quot;)
 [(link:  &quot;Shove Becky into a locker&quot; )[(set: $beckyGotShoved to &#39;true&#39;)(goto: &quot;Shove Becky into a locker&quot;)]]
 
-[[Go to Study Hall]] </tw-passagedata><tw-passagedata pid="21" name="PrincipalShove" tags="" position="1150,625" size="100,100">Principal: Sit down. I&#39;ve heard about the incident today. Care to explain why you shoved Becky into a locker?
+[[Go to Study Hall]] </tw-passagedata><tw-passagedata pid="21" name="PrincipalShove" tags="" position="1150,625" size="100,100">
 
-You: She&#39;s spreading rumors about my friend and no one is doing anything to protect $SamHimHer.
+Principal: "Sit down. I&#39;ve heard about the incident today. Care to explain why you shoved Becky into a locker?"
 
-Principal: We&#39;re doing everything we can about Sam&#39;s situation, It&#39;s possible that whoever sent the photo to everyone could be in serious trouble... They could get suspsended, or worse. I&#39;ll let you off with a warning but if I hear or see you getting into trouble it&#39;s not going to be looking good for you.
+You: "She&#39;s spreading rumors about my friend and no one is doing anything to protect $SamHimHer."
+
+Principal: "We&#39;re doing everything we can about Sam&#39;s situation, It&#39;s possible that whoever sent the photo to everyone could be in serious trouble... They could get suspsended, or worse. I&#39;ll let you off with a warning but if I hear or see you getting into trouble it&#39;s not going to be looking good for you.""
 
 [[Go to Study Hall]] </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";

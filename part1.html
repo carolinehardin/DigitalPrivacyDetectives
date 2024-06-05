@@ -82,7 +82,7 @@
         <img src="images/oneglass.jpg" width="300" height="80" alt="Magnifying Glass" class="oneglassImage">
         You have an incoming chat request from Becky!
     
-        [[accept chat]]
+        [[Accept chat->accept chat]]
         </div>
     </tw-passagedata>
 
@@ -94,7 +94,7 @@
         <img src="images/oneglass.jpg" width="300" height="80" alt="Magnifying Glass" class="oneglassImage">
         You have an incoming chat request from Becky!
     
-        [[accept chat]]
+        [[Accept chat->accept chat]]
         </div>
     </tw-passagedata>
 
@@ -106,7 +106,7 @@
         <img src="images/oneglass.jpg" width="300" height="80" alt="Magnifying Glass" class="oneglassImage">
         You have an incoming chat request from Becky!
     
-        [[accept chat]]
+        [[Accept chat->accept chat]]
         </div>
     </tw-passagedata>
 
@@ -156,14 +156,14 @@
         Becky: I still can&#39;t believe they broke up... you just know someone is going to have their eye on Jordan. It&#39;s only a matter of time.
     
         You: I guess. "><div class="widget"></div><div class="w-contain"><div class="ChatApp">ChatApp!</div><div class="name">Becky</div></div>
-        <div class="mine messages"><div id="msg1" class="message last">I should probably not say anything else</div>
-        <div id="msg2" class="message last">Sam's mom is driving us to school</div></div>
-        <div class="yours messages"><div id="msg3" class="message last">That's right, you had a sleepover last night. That means you probably heard the ENTIRE breakup! I. am. so. jealous.</div></div>
-        <div class="mine messages"><div id="msg4" class="message last">I really didn't hear anything I can share</div></div>
+        <div class="mine messages"><div id="msg1" class="message last">I should probably not say anything else.</div>
+        <div id="msg2" class="message last">Sam's mom is driving us to school.</div></div>
+        <div class="yours messages"><div id="msg3" class="message last">That's right, you had a sleepover last night. That means you probably heard the ENTIRE breakup! I. Am. So. Jealous.</div></div>
+        <div class="mine messages"><div id="msg4" class="message last">I really didn't hear anything I can share.</div></div>
         <div class="yours messages"><div id="msg5" class="message last">I still can't believe they broke up...you just know someone is going to have their eye on Jordan. It's only a matter of time.</div></div>
         </div><div class="line"></div><div class="m-box">iMessage</div></div>
         <div class="options">
-            You: [[Look, you'll have to ask Sam if you want details->But I can't say anything more]]
+            You: [[Look, you'll have to ask Sam if you want details.->But I can't say anything more]]
             <!-- if player chooses this option it can unlock option in pt 2 look for 🌼-->
             You:  (link: "Why, do you know if Jordan is already talking to someone?")
             [(set: $beckySlap to "")(goto: "Yeah, do you know if jordan is already talking to someone?")]
@@ -181,12 +181,12 @@
         You: IKR? Jordan is crushed. Just completely destroyed. It sounds like dating is off the table for at LEAST a year.
     
         Becky: Why tho? Jordon could totally get another date in time for the dance."><div class="widget"></div><div class="w-contain"><div class="ChatApp">ChatApp!</div><div class="name">Becky</div></div>
-        <div class="mine messages"><div id="msg1" class="message last">I do know this one thing</div></div>
-        <div class="yours messages"><div id="msg2" class="message last">I'm not surprised Jordan broke up with Sam. I mean, Sam is sort of...well...awkward</div></div>
+        <div class="mine messages"><div id="msg1" class="message last">Okay wait, I do know one thing.</div></div>
+        <div class="yours messages"><div id="msg2" class="message last">I'm not surprised Jordan broke up with Sam. I mean, Sam is sort of... well... awkward.</div></div>
         <div class="mine messages"><div id="msg3" class="message last">No that's the thing! Sam was the one who dumped Jordan!</div></div>
         <div class="yours messages"><div id="msg4" class="message last">WHAT?!</div></div>
-        <div class="mine messages"><div id="msg5" class="message last">IKR? Jordan is crushed. Just completely destroyed. It sounds like dating is off the table for at LEAST a year.</div></div>
-        <div class="yours messages"><div id="msg6" class="message last">Why tho? Jordan could totally get another date in time for the dance.</div></div></div><div class="line"></div><div class="m-box">iMessage</div>
+        <div class="mine messages"><div id="msg5" class="message last">IKR? Jordan is crushed. Just completely destroyed.</div></div>
+        <div class="yours messages"><div id="msg6" class="message last">Why tho? Jordan will be fine, $JordanHeShe could totally get another date in time for the dance.</div></div></div><div class="line"></div><div class="m-box">iMessage</div>
         </div>
         <div class="options">
         You: [[I should probably not say anything else.]] 
@@ -195,7 +195,7 @@
 
     <tw-passagedata pid="11" name="But I can&#39;t say anything more" tags="" position="939,1220" size="100,100"> 
         <div class="phone"><div class="chat" alt="Becky: But everyone is talking bout it. How is Sam, anyway?"><div class="widget"></div><div class="w-contain"><div class="ChatApp">ChatApp!</div><div class="name">Becky</div></div>
-        <div class="mine messages"><div id="msg1" class="message last">Look, you'll have to ask Sam if you want details</div></div>
+        <div class="mine messages"><div id="msg1" class="message last">Look, you'll have to ask Sam if you want details.</div></div>
         <div class="yours messages"><div id="msg2" class="message last">But everyone is talking about it. How is Sam anyway?</div></div></div><div class="line"></div><div class="m-box">iMessage</div></div>
         <div class="options">
         You: (link: "Sam is pretty broken up about it.")[(set: $privacyScore to it +1)(goto: "Sleepover status")]
@@ -218,10 +218,10 @@
 
     <tw-passagedata pid="13" name="Sleepover status" tags="" position="707,1286" size="100,100">
         <div class="phone"><div class="chat" alt="
-        You: Uh oh, I hear Sam&#39;s mother yelling...
+        You: Uh oh, I hear Sam&#39;s mom yelling...
     
         Becky: About what?!"><div class="widget"></div><div class="w-contain"><div class="ChatApp">ChatApp!</div><div class="name">Becky</div></div>
-        <div class="mine messages"><div id="msg1" class="message last">Uh oh, hold that thought. I think I hear Sam's mother yelling</div></div>
+        <div class="mine messages"><div id="msg1" class="message last">Uh oh, hold that thought. I think I hear Sam's mom yelling.</div></div>
         <div class="yours messages"><div id="msg2" class="message last">Omg about what?</div></div></div><div class="line"></div><div class="m-box">iMessage</div></div>
         <div class="options">
         //Just then, you hear voices YELLING at each other from the other room.//
@@ -236,11 +236,11 @@
 
     <tw-passagedata pid="14" name="photoWasSent" tags="" position="711,1396" size="100,100"> 
         <div class="phone"><div class="chat" alt="Becky: OMG Did you get the email with the photo?! It just came in! Sam must be humiliated. There&#39;s no way I can unsee this.. LOL."><div class="widget"></div><div class="w-contain"><div class="ChatApp">ChatApp!</div><div class="name">Becky</div></div>
-        <div class="yours messages"><div id="msg1" class="message last">OMG Did you get the email with the photo?! It just came in! Sam must be humiliated. There's no way I can unsee this...LOL</div></div></div><div class="line"></div><div class="m-box">iMessage</div></div>
+        <div class="yours messages"><div id="msg1" class="message last">OMG Did you get the email with the photo?! It just came in! Sam must be humiliated. There's no way I can unsee this... LOL</div></div></div><div class="line"></div><div class="m-box">iMessage</div></div>
         <div class="options">
             You: (link: "Wait, I'm opening my email to look now.")[(set: $privacyScore to it +0)(goto: "respondToPhotoEmail")]
 
-            You: (link: "Uh oh. That's not funny. I'm just going to delete it without looking. I want to respect Sam's privacy")[(set: $privacyScore to it +5)(goto: "respondToPhotoEmail")]
+            You: (link: "Uh oh. That's not funny. I'm just going to delete it without looking. I want to respect Sam's privacy.")[(set: $privacyScore to it +5)(goto: "respondToPhotoEmail")]
         
             You: (link: "LOL it's an embarrassing photo isn't it? I'm not gonna look but describe it to me.")[(set: $privacyScore to it +1)(goto: "respondToPhotoEmail")]
         </div>
@@ -249,26 +249,24 @@
 
 
     <tw-passagedata pid="15" name="respondToPhotoEmail" tags="" position="711,1506" size="100,100"> 
-        <div class="phone"><div class="chat" alt="Becky: OMG the photo went out to ::everybody:: thru the school email"><div class="widget"></div><div class="w-contain"><div class="ChatApp">ChatApp!</div><div class="name">Becky</div></div>
-        <div class="yours messages"><div id="msg1" class="message last">OMG the photo went out to everybody thru the school email</div></div></div><div class="line"></div><div class="m-box">iMessage</div></div>
+        <div class="phone"><div class="chat" alt="Becky: OMG the photo went out to ::everybody:: thru the school email."><div class="widget"></div><div class="w-contain"><div class="ChatApp">ChatApp!</div><div class="name">Becky</div></div>
+        <div class="yours messages"><div id="msg1" class="message last">OMG the photo went out to everybody thru the school emails.</div></div></div><div class="line"></div><div class="m-box">iMessage</div></div>
         <div class="options">
             You: (link: "I dunno, we should really not talk about the photo. Maybe we should send a message to everybody and ask them not to open the email.")[(set: $privacyScore to it +5)(goto: "ride")]
 
-            You: (link: "LOL Let's forward it to more people, everyone needs to see this. This is BRUTAL! I'm going to post this to $SamHisHer other social media too....")[(set: $privacyScore to it +0)(goto: "ride")]
+            You: (link: "LOL let's forward it to more people, everyone needs to see this. This is BRUTAL!")[(set: $privacyScore to it +0)(goto: "ride")]
         
             You: (link: "Well it's too late now, nothing can be done to help. Poor Sam. =(")[(set: $privacyScore to it +1)(goto: "ride")]
         
-            You: (link: "Sam is going to get so much attention from this. UGH!!! Sam is such an attention hog, always grabbing the spot light. Can you forward it?")[(set: $privacyScore to it +0)(goto: "ride")]
+            You: (link: "Sam is going to get so much attention from this. UGH!!! Sam is such an attention hog, always grabbing the spotlight. Can you forward it?")[(set: $privacyScore to it +0)(goto: "ride")]
         </div>
     </tw-passagedata>
 
 
 
-<tw-passagedata pid="16" name="ride" tags="" position="1025,275" size="100,100">(set: $is to &#39;is&#39;)
-(set: $does to &#39;does&#39;)
-(if: $SamHeShe is &#39;they&#39;)[(set: $is to &#39;are&#39;)(set: $does to &#39;do&#39;)]
-You get a ride to school with Sam, but $SamHeShe $is really quiet. Is it because $SamHeShe $is thinking about the photo, the breakup
-    [[....or $does $SamHeShe know Becky was asking you for gossip?-&gt;GoToSchool]]
+<tw-passagedata pid="16" name="ride" tags="" position="1025,275" size="100,100">(set: $is to &#39;is&#39;)(set: $does to &#39;does&#39;)(if: $SamHeShe is &#39;they&#39;)[(set: $is to &#39;are&#39;)(set: $does to &#39;do&#39;)]
+You hang out with Sam for a bit, but $SamHeShe $is really quiet. Is it because $SamHeShe $is thinking about the photo, the breakup,
+    [[or $does $SamHeShe know Becky was trying to gossip with you?-&gt;GoToSchool]]
     
     
     &lt;!--🐤Make clue room so that you run back inside to get sams paper--&gt;
@@ -276,13 +274,14 @@ You get a ride to school with Sam, but $SamHeShe $is really quiet. Is it because
     
     
     
-    <tw-passagedata pid="17" name="GoToSchool" tags="" position="825,275" size="100,100">Great work detective! You are done with this set of digital clues.
+    <tw-passagedata pid="17" name="GoToSchool" tags="" position="825,275" size="100,100">
     (if: $beckySlap is &quot; 1&quot;)[(set: $codeWord to it + $beckySlap)]
+    Great work detective! You are done with this set of digital clues.
     Your codeword is: $codeWord (write this down to use in part 2!)
 
     Take a moment to jot down what you know about the characters so you can discover who sent the photo. Who said things that respected privacy? (and who didn&#39;t?)
 
-    You can now explore the &#39;room&#39; until the time is up, or go back through the story again.
+    You can now take on the Bonus Adventure until the time is up, or go back through the story again.
 
     [[Go to start-&gt;Log into Secretz]]
 

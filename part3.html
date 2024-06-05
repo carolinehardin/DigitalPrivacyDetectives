@@ -60,7 +60,10 @@
     (if: $goodWordsArray contains $codeWord)
     [(goto: &quot;WelcomeToStudyHall&quot;)]
    
-       </tw-passagedata><tw-passagedata pid="2" name="WelcomeToStudyHall" tags="" position="1500,325" size="100,100">As the bell rings you walk into study hall and see many of your classmates chatting and goofing off.  You&#39;re all caught up on homework which gives you time to chat with your peers. 
+       </tw-passagedata><tw-passagedata pid="2" name="WelcomeToStudyHall" tags="" position="1500,325" size="100,100">
+        <img style="padding: 50 40px; float: right;" src="images/pt3.PNG" width ="300" height="215" alt="School Hallway">
+
+        As the bell rings, you walk into study hall and see many of your classmates chatting and goofing off.  You&#39;re all caught up on homework which gives you time to chat with your peers. 
 
 Sam is sitting in the corner of the room working on homework. [[$samMessage-&gt;AreYouOkSam]] 
 
@@ -68,73 +71,80 @@ Susana is making Oragami Cranes with the leftover scraps from her art project. [
 
 Jordan is doodling on $JordanHisHer homework. [[$jordanMessage-&gt;WhoIsToBlame]] 
 
-(if: $samQuest is 1 and $susanaQuest is 1 and $jordanQuest is 1)
-[[[Go to the food court-&gt;GoToFoodCourt]]]
-</tw-passagedata><tw-passagedata pid="3" name="AreYouOkSam" tags="" position="1275,525" size="100,100">You: Sam! Are you okay? I&#39;m so sorry you&#39;re having to deal with this. 
+(if: $samQuest is 1 and $susanaQuest is 1 and $jordanQuest is 1)[[[Go to the food court-&gt;GoToFoodCourt]]]
+</tw-passagedata><tw-passagedata pid="3" name="AreYouOkSam" tags="" position="1275,525" size="100,100">
 
-Sam: Yeah, my mom is pretty upset. She contacted the site and asked them to take down the photo. I really hope they do... I&#39;m so mad.
+    You: "Sam! Are you okay? I'm so sorry you're having to deal with this."
 
-You: I bet. At least she contacted someone!
-
-Sam: She also called the school. They&#39;re gonna put together an action plan. I&#39;m glad they are. But I&#39;m so embarassed.
+    Sam: "Yeah, my mom called the school. They're gonna put together an action plan. I'm glad they are, but I'm so embarassed. I totally fell for that phishing scam."
+    
+    You: "What do you mean phishing?"
+    
+    Sam: "I was linked to a fake Snapchat website for a giveaway and I didn't check, but the URL was not the official Snapchat URL. I logged in and they hacked into my account. I wonder who was behind this?"
             
-You: [[What do you need right now?-&gt;ThatsAlsoSmart]]
+You: [["What do you need right now?"-&gt;ThatsAlsoSmart]]
             
-You: [[I bet it was Akachi Cho! Revenge for the brutal way you shut down being asked out? -&gt;AkachiBlame]]
+You: [["I bet it was Akachi Cho! Revenge for the brutal way you shut down being asked out?" -&gt;AkachiBlame]]
 
 (set: $samQuest to 1)
-(set: $samMessage to &#39;Talk to Sam (already spoken to)&#39;)</tw-passagedata><tw-passagedata pid="4" name="TalkToSusana" tags="" position="1550,525" size="100,100">You: Hey Susana!
+(set: $samMessage to &#39;Talk to Sam (already spoken to)&#39;)</tw-passagedata><tw-passagedata pid="4" name="TalkToSusana" tags="" position="1550,525" size="100,100">
+You: "Hey Susana!"
 
-Susana: Hey Cheeseball! What&#39;s up! (Susana calls you Cheeseball after you ate a whole gallon of Cheeseballs for lunch on day)
+Susana: "Hey Cheeseball! What's up! (Susana started calling you Cheeseball after you ate a whole gallon of Cheeseballs for lunch one time)"
 
-You: nothing much, just hanging out.
+You: "Nothing much, just hanging out."
 
-Susana: you wanna go to the vending machine with me?
+Susana: "You wanna go to the vending machine with me?"
 
-You: sure why not?
+You: "Sure, why not?"
 
 [[Go to the vending machines-&gt;GoToVendingMachines]]
 
 (set: $susanaQuest to 1)
-(set: $susanaMessage to &#39;Talk to Susana (already spoken to)&#39;)</tw-passagedata><tw-passagedata pid="5" name="WhoIsToBlame" tags="" position="1850,450" size="100,100">You: Hey Jordan what&#39;s up?
+(set: $susanaMessage to &#39;Talk to Susana (already spoken to)&#39;)</tw-passagedata><tw-passagedata pid="5" name="WhoIsToBlame" tags="" position="1850,450" size="100,100">
 
-Jordan: I can&#39;t believe Sam is back in school! $SamHeShe should just be homeschooled at this point.
+    You: "Hey Jordan what's up?"
 
-You: It&#39;s not even Sam&#39;s fault!
-
-Jordan: Yeah it is. Sam let someone take the photo.
-
-You: Uh, it was taken without Sam even KNOWING. Way to blame the victim.
-
-Jordan: Well I stopped caring about $SamHimHer after $SamHeShe dumped me! Buttttt  I bet I know who sent it. I can see Yishai&#39;s screen from here and he&#39;s using one of those anonymous email services. 
+    Jordan: "I can't believe Sam is back in school! $SamHeSheCaps should just be homeschooled at this point."
+    
+    You: "It's not even Sam's fault!"
+    
+    Jordan: "Yeah it is. Sam let someone take the photo."
+    
+    You: "Uh, it was taken without Sam even KNOWING. Way to blame the victim."
+    
+    Jordan: "Well I stopped caring about $SamHimHer after $SamHeShe dumped me! Buttttt I bet I know who sent it. I can see Yishai's screen from here and he's using one of those anonymous email services."
             
 You: [[Why were you snooping on Yishai? That&#39;s a crappy thing to do.-&gt;Blame2]]
 
 You: [[You didn&#39;t see him type his password did you? We could open up the program and look for evidence!-&gt;Blame3]]
 
 (set: $jordanQuest to 1)
-(set: $jordanMessage to &#39;Talk to Jordan (already spoken to)&#39;)</tw-passagedata><tw-passagedata pid="6" name="ThatsAlsoSmart" tags="" position="1200,675" size="100,100">Sam: I don&#39;t know..  I&#39;m trying to do all this stuff now to prevent it from happening again. I put a sticker on my webcam and I reset all my passwords. I also am using 2 factor authentification on all my accounts.
+(set: $jordanMessage to &#39;Talk to Jordan (already spoken to)&#39;)</tw-passagedata><tw-passagedata pid="6" name="ThatsAlsoSmart" tags="" position="1200,675" size="100,100">
+    Sam: "I don&#39;t know..  I&#39;m trying to do all this stuff now to prevent it from happening again. I put a sticker on my webcam and I reset all my passwords. I also am using 2 factor authentification on all my accounts."
 
-You: That&#39;s smart.
+You: "That&#39;s smart."
 
-Sam: I just wish I knew who leaked the photo, It&#39;s hard to tell whose on my side.
+Sam: "I just wish I knew who leaked the photo, It&#39;s hard to tell whose on my side."
 
-You: I&#39;ll always be on your side Sam, i&#39;ll get to the bottom of this.
+You: "I&#39;ll always be on your side Sam, I am going to get to the bottom of this."
 
 [[Interrogate Suspects -&gt;Suspects]]
-</tw-passagedata><tw-passagedata pid="7" name="AkachiBlame" tags="" position="1375,675" size="100,100">Sam: Hmm, true. But revenge? That seems a bit extreme, don&#39;t you think?
+</tw-passagedata><tw-passagedata pid="7" name="AkachiBlame" tags="" position="1375,675" size="100,100">
+    
+    Sam: "Hmm, maybe. But revenge? That seems a bit extreme, don't you think?"
 
-You: I know, it does sound a bit dramatic, but you never know. People can surprise you when they&#39;re hurt or embarrassed.
+    You: "I know, it does sound a bit dramatic, but you never know. People can surprise you when they're hurt or embarrassed."
+    
+    Sam: "Fair point. But isn't it possible that it's just a coincidence?"
+    
+    You: "That's true, but the timing just seems too perfect. Right after you rejected Akachi, suddenly everything starts going wrong. It can't be just a coincidence."
+    
+    Sam: "Well, instead of jumping to conclusions, maybe you should talk to Akachi and clear things up. Find out if there's any truth to your suspicion."
+    
+    You: "Yeah, you're right. I should have a conversation with Akachi and some others to find out what's really going on. It might just be a misunderstanding."
 
-Sam: Fair point. But isn&#39;t it possible that it&#39;s just a coincidence?
-
-You: That&#39;s true, but the timing just seems too perfect. Right after you rejected Akachi, suddenly everything starts going wrong. It can&#39;t be just a coincidence.
-
-Sam: Well, instead of jumping to conclusions, maybe you should talk to Akachi and clear things up. Find out if there&#39;s any truth to your suspicion.
-
-You: Yeah, you&#39;re right. I should have a conversation with Akachi and some others to find out what&#39;s really going on. It might just be a misunderstanding.
-
-[[Talk to some of your classmates -&gt;Suspects]]</tw-passagedata><tw-passagedata pid="8" name="Suspects" tags="" position="1275,800" size="100,100">You look around the room, you see some familiar faces who could provide useful information. Who do you interrogate?
+[[Talk to some of your classmates -&gt;Suspects]]</tw-passagedata><tw-passagedata pid="8" name="Suspects" tags="" position="1275,800" size="100,100">You look around the room, seeing some familiar faces who could provide useful information. Who do you interrogate?
 
 [[$akachi-&gt;Akachi]]
 [[$yishai-&gt;Yishai]]
@@ -176,23 +186,25 @@ Becky is clearly not going to be helpful here.
 
 You: &quot;Lochan, you were laughing about Sam&#39;s photo so much, people are starting to wonder if you were the one who leaked it.&quot;
 
-Lochan: &quot;Who, me?? Of course not. I don&#39;t care enough about that kid to leak $SamHisHer photo, I heard Sam used the same password for everything, no wonder $SamHeShe got hacked!&quot;
+Lochan: &quot;Who, me?? Of course not. I don&#39;t care enough about that kid to leak $SamHisHer photo. I heard Sam used the same password for everything, no wonder $SamHeShe got hacked!&quot;
 
 You: &quot;Not everyone is an expert in digital privacy, I&#39;m sure even you could be doing  better protect yourself and your privacy.&quot;
 
 [(link:  &quot;Continue the interrogations&quot;)[(goto: &quot;Suspects&quot;)]]
-(set: $lochan to &#39;Lochan (already interrogated)&#39;)</tw-passagedata><tw-passagedata pid="13" name="Susana" tags="" position="1462.5,950" size="100,100">You go sit down next to Susana, after all she has been your childhood friend.
+(set: $lochan to &#39;Lochan (already interrogated)&#39;)</tw-passagedata><tw-passagedata pid="13" name="Susana" tags="" position="1462.5,950" size="100,100">
+    You go sit down next to Susana, after all she is one of your childhood best friends.
 
-You: Hey Susana, do you know anything about the photo being leaked?
+You: "Hey Susana, do you know anything about the photo being leaked?"
 
-Susana: No, I don&#39;t. I feel so bad, Sam seems pretty upset about it. 
+Susana: "No, I don&#39;t. I feel so bad, Sam seems pretty upset about it.""\
 
-You: Yeah, it&#39;s weird though. Everyone is acting so strange as if they all had a part to play in the photo.
+You: "Yeah, it&#39;s weird though. Everyone is acting so strange as if they all had a part to play in the photo."
 
-Susana: Well i&#39;ll keep my ears open if I hear anything. Good luck on your search!
+Susana: "Well i&#39;ll keep my ears open if I hear anything. Good luck on your search!"
 
 [(link:  &quot;Continue the interrogations&quot;)[(goto: &quot;Suspects&quot;)]]
-(set: $susana to &#39;Susana (already interrogated)&#39;)</tw-passagedata><tw-passagedata pid="14" name="Jordan" tags="" position="1587.5,950" size="100,100">You feel like you have to speak to Jordan. After all, the photo was sent shortly after Sam dumped $JordanHimHer
+(set: $susana to &#39;Susana (already interrogated)&#39;)</tw-passagedata><tw-passagedata pid="14" name="Jordan" tags="" position="1587.5,950" size="100,100">
+    You feel like you have to speak to Jordan. After all, the photo was sent shortly after Sam dumped $JordanHimHer.
 
 You: &quot;Hey Jordan, how are you doing with the whole breakup thing?&quot;
 
@@ -205,49 +217,66 @@ This seems to have angered Jordan.
 Jordan: &quot;What? Is this why you&#39;re talking to me? I can&#39;t believe you would think I am capable of this!&quot;
 
 [(link:  &quot;Continue the interrogations&quot;)[(goto: &quot;Suspects&quot;)]]
-(set: $jordan to &#39;Jordan (already interrogated)&#39;)</tw-passagedata><tw-passagedata pid="15" name="GoToVendingMachines" tags="" position="1625,675" size="100,100">You and Susana walk down the hall to the vending machines when Susana points out something strange.
+(set: $jordan to &#39;Jordan (already interrogated)&#39;)</tw-passagedata><tw-passagedata pid="15" name="GoToVendingMachines" tags="" position="1625,675" size="100,100">
 
-Susana: That&#39;s weird, I walked down this hall earlier and this writing on the wall wasn&#39;t here before. 
+You and Susana walk down the hall to the vending machines when Susana points out something strange.
+
+Susana: "That's weird, I walked down this hall earlier today and this writing on the wall wasn't here before." 
 
 The writing on the wall reads, //Sam got what $SamHeShe deserved//
 
-You: you mean you haven&#39;t seen this until today?
+You: "You mean you haven't seen this until now?"
 
-Susana: no, not at all. This has to be new i&#39;m certain of it.
+Susana: "No, not at all. This has to be new, I'm certain of it."
 
-You: hmmm...
+You: "Hmmm..."
 
-You start to think if you should just [[ignore it]] or [[talk to the Principal-&gt;TalkToThePrincipal]]</tw-passagedata><tw-passagedata pid="16" name="Blame2" tags="" position="1925,650" size="100,100">Jordan: Oh, come on! It&#39;s not like I make a habit out of snooping around. I just happened to stumble upon something fishy, and you know me—I can&#39;t resist a good mystery.
+You start to think about if you should just [[ignore it]] or [[talk to the Principal-&gt;TalkToThePrincipal]]</tw-passagedata><tw-passagedata pid="16" name="Blame2" tags="" position="1925,650" size="100,100">
+    
+    Jordan: "Oh, come on! It's not like I make a habit out of snooping around. I just happened to stumble upon something fishy, and you know me—I can't resist a good mystery."
 
-You: It is a little bit strange isn&#39;t it... Yisahi, the new kid, Sam&#39;s photo got leaked. Somethings not adding up.
-
-Jordan: But what motive would he have? He doesn&#39;t even know Sam.
-
-You: you&#39;re right, we need more evidence. Keep snooping and see what you can find.
+    You: "It is a little bit strange isn't it... Yisahi, the new kid, Sam's photo got leaked. Somethings not adding up."
+    
+    Jordan: "But what motive would he have? He doesn't even know Sam."
+    
+    You: "You're right, we need more evidence. Keep snooping and see what you can find."
 
 [[Return to your desk-&gt;WelcomeToStudyHall]] 
 
-</tw-passagedata><tw-passagedata pid="17" name="Blame3" tags="" position="2050,450" size="100,100">Jordan: I did see his password, lets login to his account.
+</tw-passagedata><tw-passagedata pid="17" name="Blame3" tags="" position="2050,450" size="100,100">
 
-Jordan opens $JordanHisHer laptop and logs into Yishai&#39;s account...
+    Jordan: "I did see his password, lets login to his account."
 
-You: OMG I can&#39;t believe that Yishai&#39;s been forwarding Sam&#39;s photo to other people! What if he&#39;s the original sender? Keep scrolling Jordan.
+Jordan opens $JordanHisHer laptop and logs into Yishai's account...
 
-Jordan: Oh wait hold on, what&#39;s this....
+You: "OMG I can't believe that Yishai's been forwarding Sam's photo to other people! What if he's the original sender? Keep scrolling Jordan."
 
-You: It looks like an anonymes confessions page? Click on it what does it say?
+Jordan: "Wait hold on, what's this...."
 
-[[Jordan clicks on it]]</tw-passagedata><tw-passagedata pid="18" name="ignore it" tags="" position="1700,875" size="100,100">You: I dont know susana, maybe we should just ignore it and let this whole thing blow over. 
+You: "It looks like an anonymous confessions page? Click on it what does it say?"
 
-Susana: Yeah maybe you&#39;re right, we don&#39;t want to dig a deeper hole.
+[[Jordan clicks on it]]
+</tw-passagedata><tw-passagedata pid="18" name="ignore it" tags="" position="1700,875" size="100,100">
 
-Susana gets her red licorice and you both head back to study hall. You think the situation will blow over and people will start gossiping about something new. 
+You: "I dont know Susana, maybe we should just ignore it and let this whole thing blow over." 
 
-[[Return to study hall-&gt;WelcomeToStudyHall]] </tw-passagedata><tw-passagedata pid="19" name="TalkToThePrincipal" tags="" position="1825,825" size="100,100">You: Hey Susana, you want to go the the pricipals to see if we can get a time stamp on who wrote this?
+Susana: "Yeah maybe you&#39;re right, we don&#39;t want to dig a deeper hole."
 
-Susana: OMG! AN INVESTIGATION I&#39;M SO IN!!!!
+Susana gets her snack and you both head back to study hall. You think the situation will blow over and people will eventually start gossiping about something new. 
 
-You and Susana walk to the principals and ask to see the cameras. You don&#39;t have the clearance to watch the videos, but the principal thinks your idea is genius and tells you that he will look into it for you. 
+[[Return to study hall-&gt;WelcomeToStudyHall]] </tw-passagedata><tw-passagedata pid="19" name="TalkToThePrincipal" tags="" position="1825,825" size="100,100">
+
+    You: "Hey Susana, you want to go the the Principal's office to see if we can get a time stamp on who wrote this? There's a camera pointing right at it!"
+
+    Susana: "OMG! AN INVESTIGATION I'M SO IN!!!!"
+    
+    After looking at the camera, you notice something strange.
+    
+    You: "Hold on, there's a sticker covering the camera, whoever did this must've put it there before writing on the wall. There won't be any evidence to collect."
+    
+    Susana: "Darn, I cover my laptop webcam to protect my privacy. The suspect did something similar, but for the wrong reasons."
+    
+    You: "Whoever it is, I'm going to catch them."
 
 [[Return to study hall-&gt;WelcomeToStudyHall]] </tw-passagedata><tw-passagedata pid="20" name="GoToFoodCourt" tags="" position="1025,300" size="100,100">
     
@@ -255,28 +284,30 @@ You and Susana walk to the principals and ask to see the cameras. You don&#39;t 
 
     Don&#39;t forget to jot down what you learned about each person in the story.
 
-    You can now explore the &#39;room&#39; until the time is up, or go back through the story again.
+    You can now take on the Bonus Adventure until the time is up, or go back through the story again.
 
 Your code word is: $codeWord
 
     [[Start over -&gt;WelcomeToStudyHall]]
 
     (link: &quot;Bonus Adventure!&quot;)[(goto-url: &#39;https://carolinehardin.github.io/DigitalPrivacyDetectives/part3-clueroom_intro.html&#39;)]
-</tw-passagedata><tw-passagedata pid="21" name="Jordan clicks on it" tags="" position="2050,600" size="100,100">Jordan: It looks like it&#39;s just posts with things people have coonfessed but didn&#39;t want anyone knowing who they are!
+</tw-passagedata><tw-passagedata pid="21" name="Jordan clicks on it" tags="" position="2050,600" size="100,100">
+    
+    Jordan: "It looks like it's just posts with things people from our school have confessed but didn't want anyone knowing who they are!"
 
-You both start reading some of the posts,
-&quot;I used my brothers toothbrush&quot;
-&quot;I was the one who put a fork in the microwave and broke it&quot;
-&quot;I leak...
+You start reading some of the posts:
+"I used my brother's toothbrush"
+"I was the one who put a fork in the microwave and broke it"
+"I leak...
 Jordan scrolled up before you could finish reading it.
 
-You: Wait jordan scroll up I think I saw something! it&#39;s.. right... THERE!
+You: "Wait jordan scroll up I think I saw something! It's.. right... THERE!"
 
-&quot;I leaked Sam&#39;s Photo Because I am jealous of $SamHimHer&quot;
+"I leaked Sam's photo because I am jealous of $SamHimHer"
 
-You: Can we hack into the system and see who wrote that?
+You: "Can we try to figure out who wrote that?"
 
-Jordan: I&#39;ll see what I can do.
+Jordan: "I'll see what I can do."
 
 [[Return to your desk-&gt;WelcomeToStudyHall]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
